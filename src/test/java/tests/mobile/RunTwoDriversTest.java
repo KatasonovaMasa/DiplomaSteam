@@ -28,8 +28,8 @@ import static io.qameta.allure.Allure.step;
 import static java.time.temporal.ChronoUnit.MILLIS;
 
 @Tag("steamApi")
-@Feature("Автотесты на мобилке")
-@Story("Авторизация")
+@Feature("Aвтотесты для Steam")
+@Story("Автотесты для Mobile")
 @Owner("Катасонова Мария")
 public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
