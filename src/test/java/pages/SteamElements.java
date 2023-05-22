@@ -24,13 +24,17 @@ public class SteamElements {
     private final SelenideElement buttonSearch = $x("//*[@id='store_search_link']/img");
     private final SelenideElement searchJob = $x("//span[contains(text(),'Cuphead')]");
     private final SelenideElement openGames = $x("//span[text()='Cuphead']");
-    private final SelenideElement logotipShop = $x("//*[@id='logo_holder']/a/img");
+    private final SelenideElement account = $x("//*[@id='account_pulldown']");
     private final SelenideElement openCategories = $x("//div[@id='genre_tab']//span[@class='pulldown']");
     private final SelenideElement successBasketGame = $x("//div[@class='cart_status_message']");
     private final SelenideElement languageSelection = $x("//*[@id='language_pulldown']");
     private final SelenideElement english = $x("//a[contains(text(),'English (английский)')]");
-    public SelenideElement getLogotipShop(){
-        return logotipShop;
+    private final SelenideElement logout = $x("//a[@href='javascript:Logout();']");
+    public SelenideElement logout(){
+        return logout;
+    }
+    public SelenideElement account(){
+        return account;
     }
     public SelenideElement getOpenShop(){
         return openShop;

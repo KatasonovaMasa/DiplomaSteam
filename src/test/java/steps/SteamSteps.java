@@ -98,4 +98,9 @@ public class SteamSteps {
     public void successCartEmpty(){
         steamelements.getSuccessCartEmpty().shouldHave(visible.because("Корзина не пуста"));
     }
+    @Step("Выход из учетки")
+    public void logout(){
+        steamelements.account().click();
+        steamelements.logout().click();
+    }
 }
