@@ -7,6 +7,9 @@
 
 + [Проект](#Project)
 + [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)
+  - <a href="#cases-ui"> UI
+  - <a href="#cases-api"> API
+  - <a href="#cases-mobile"> Mobile
 + [👷‍♂️ Сборка в Jenkins](#Build_in_Jenkins)
 + [:clipboard: Параметры сборки в Jenkins:](#Build_Parameters_in_Jenkins)
 + [:computer: Запуск из терминала](#Launch_from_terminal)
@@ -53,8 +56,9 @@
 <a href="https://store.steampowered.com/"><code><img width="5%" title="Steam" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"></code></a> Проект по автоматизации тестирования для Steam, — онлайн-сервис цифрового распространения компьютерных игр и программ :star2:
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
+<a id="cases-ui"></a>UI-кейсы:
 
-  :clipboard: Наличия раздела игр из категории 'Выживание'</br>
+ :clipboard: Наличия раздела игр из категории 'Выживание'</br>
 
  :speech_balloon: Наличие рекомендаций в Активности сообщества</br>
 
@@ -63,6 +67,20 @@
  :card_index_dividers: Добавление игры в корзину</br>
 
   :open_file_folder: Удаление игры из корзину</br>
+
+<a id="cases-api"></a>API-кейсы:
+:heavy_check_mark: Открытие раздела игр из категории 'Выживание'</br>
+
+:heavy_check_mark: Поиск игр</br>
+
+:heavy_check_mark: Добавление игры в корзину</br>
+
+:heavy_check_mark: Проверка доступа</br>
+
+<a id="cases-mobile"></a>Mobile-кейсы:
+
+
+
 
 <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборка в Jenkins<h2></a>
 
