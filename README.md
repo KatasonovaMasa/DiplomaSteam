@@ -13,9 +13,12 @@
 + [👷‍♂️ Сборка в Jenkins](#Build_in_Jenkins)
 + [:clipboard: Параметры сборки в Jenkins:](#Build_Parameters_in_Jenkins)
 + [:computer: Запуск из терминала](#Launch_from_terminal)
+  - <a href="#console-ui"> UI
+  - <a href="#console-api"> API
+  - <a href="#console-mobile"> Mobile
 + [:chart_with_downwards_trend: Allure отчет](#Allure_report)
-    + [Главный экран отчета](#Allure_report1)
-    + [Страница с проведенными тестами](#Allure_report2)
+  + [Главный экран отчета](#Allure_report1)
+  + [Страница с проведенными тестами](#Allure_report2)
 + [:bar_chart: Интеграция с Allure TestOps](#Integration_Allure_TestOps)
     + [Экран с результатами запуска тестов](#Интеграция_с_Allure_TestOps1)
     + [Страница с тестами в TestOps](#Интеграция_с_Allure_TestOps2)
@@ -115,15 +118,27 @@
 
 
 <a name="Launch_from_terminal"><h2>:computer: Запуск из терминала</h2></a>
+### <a id="console-ui"></a>Локальный запуск UI-тестов
 
-Локальный запуск:
+```
+gradle clean steamUI
+```
+
+### <a id="console-api"></a>Локальный запуск API-тестов
 
 ```
 
-gradle clean test
+gradle clean steamApi
 
 ```
 
+### <a id="console-mobile"></a>Локальный запуск API-тестов
+
+```
+
+gradle clean steamMobile
+
+``
 Удаленный запуск:
 
 ```
