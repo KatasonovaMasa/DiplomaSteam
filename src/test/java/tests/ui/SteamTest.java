@@ -19,11 +19,11 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @Tag("steamUI")
 @Owner("Катасонова Мария")
+@Feature("UI aвтотесты")
 public class SteamTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
-    @Feature("Автотесты")
     @Story("Раздел Игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
@@ -35,7 +35,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Feature("Автотесты")
     @Story("Разделы Активность сообщества")
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
@@ -45,7 +44,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Feature("Автотесты")
     @Story("Раздел Игр")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
@@ -56,7 +54,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Feature("Автотесты")
     @Story("Корзина игр")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
@@ -68,7 +65,6 @@ public class SteamTest extends TestBase {
 
 
     @Test
-    @Feature("Автотесты")
     @Story("Корзина игр")
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
