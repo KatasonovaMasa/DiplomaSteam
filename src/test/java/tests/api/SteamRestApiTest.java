@@ -19,7 +19,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("steamApi")
-@Feature("Апишка для тестов Steam")
+@Feature("Апи автотесты для Steam")
 @Owner("Катасонова Мария")
 public class SteamRestApiTest {
 

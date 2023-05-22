@@ -27,7 +27,7 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 
 @Tag("steamApi")
 @Owner("Катасонова Мария")
-@Feature("Автотесты на мобилке")
+@Feature("Мобильные автотесты для Steam")
 public class RunBrowserstackTests extends tests.TestBaseTwoDrivers {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
