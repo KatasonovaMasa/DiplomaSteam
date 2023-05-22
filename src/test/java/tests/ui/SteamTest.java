@@ -12,12 +12,12 @@ import tests.TestBase2;
 
 @Tag("steamUI")
 @Owner("Катасонова Мария")
-@Feature("UI aвтотесты для Steam")
+@Feature("Aвтотесты для Steam")
+@Story("Автотесты для UI")
 public class SteamTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
-    @Story("Раздел игр")
     @DisplayName("Авторизация на сайте")
     void avtorization(){
         steamSteps.openSteam();
@@ -27,7 +27,6 @@ public class SteamTest extends TestBase {
 
 
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         steamSteps.openSteam();
@@ -40,7 +39,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Story("Разделы Активность сообщества")
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         steamSteps.openSteam();
@@ -51,7 +49,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
@@ -64,7 +61,6 @@ public class SteamTest extends TestBase {
     }
 
     @Test
-    @Story("Корзина игр")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         steamSteps.openSteam();
@@ -77,7 +73,6 @@ public class SteamTest extends TestBase {
 
 
     @Test
-    @Story("Корзина игр")
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         steamSteps.openSteam();

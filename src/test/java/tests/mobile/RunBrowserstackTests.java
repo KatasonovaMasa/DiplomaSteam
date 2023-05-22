@@ -27,13 +27,13 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 
 @Tag("steamApi")
 @Owner("Катасонова Мария")
-@Feature("Мобильные автотесты для Steam")
+@Feature("Aвтотесты для Steam")
+@Story("Автотесты для Mobile")
 public class RunBrowserstackTests extends tests.TestBaseTwoDrivers {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
     @Test
     @Order(1)
-    @Story("Раздел Игр")
     @DisplayName("Авторизация в приложении")
     void openApp() {
         step("Авторизация", () -> {
@@ -68,7 +68,6 @@ public class RunBrowserstackTests extends tests.TestBaseTwoDrivers {
 
     @Test
     @Order(3)
-    @Story("Корзина игр")
         @DisplayName("Добавление игры в корзину")
         void potentialBuyGames () {
             step("Добавление игры в корзину", () -> {
@@ -90,7 +89,6 @@ public class RunBrowserstackTests extends tests.TestBaseTwoDrivers {
 
     @Test
     @Order(4)
-    @Story("Корзина игр")
     @DisplayName("Удалить игру из корзины")
         void deleteGameCart () {
             step("Удалить игру из корзины", () -> {

@@ -19,12 +19,12 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("steamApi")
-@Feature("Апи автотесты для Steam")
+@Feature("Aвтотесты для Steam")
+@Story("Автотесты для API")
 @Owner("Катасонова Мария")
 public class SteamRestApiTest {
 
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Проверка поиска игр")
     void searchJobApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -48,7 +48,6 @@ public class SteamRestApiTest {
     }
 
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -72,7 +71,6 @@ public class SteamRestApiTest {
     }
 
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -90,7 +88,6 @@ public class SteamRestApiTest {
         assertEquals(true, data.isbAllowAppImpressions());
     }
     @Test
-    @Story("Раздел Игр")
     @DisplayName("Проверка доступа")
     void AccessGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
