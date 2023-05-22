@@ -132,7 +132,7 @@ gradle clean steamApi
 
 ```
 
-### <a id="console-mobile"></a>Локальный запуск API-тестов
+### <a id="console-mobile"></a>Локальный запуск Mobile-тестов
 
 ```
 
