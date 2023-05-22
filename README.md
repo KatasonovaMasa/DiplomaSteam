@@ -138,7 +138,8 @@ gradle clean steamApi
 
 gradle clean steamMobile
 
-``
+```
+
 Удаленный запуск:
 
 ```
