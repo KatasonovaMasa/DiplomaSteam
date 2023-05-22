@@ -1,4 +1,5 @@
-<h1>Добро пожаловать!</br> 
+# UI, API и Mobile автотесты для сайта [STEAM](https://store.steampowered.com/)
+<img alt="GIPHY" src="/design/icons/STEAM.PNG">
 
 # <a name="TableOfContents">Содержание страницы</a>
 + [:trophy: Мои инструменты и технологии](#MyToolsAndTechnologies)
