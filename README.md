@@ -1,5 +1,5 @@
 # UI, API и Mobile автотесты для сайта [STEAM](https://store.steampowered.com/)
-<img alt="GIPHY" src="/design/icons/STEAM.PNG">
+<img alt="GIPHY" src="/design/icons/STEAM.png">
 
 # <a name="TableOfContents">Содержание страницы</a>
 + [:trophy: Мои инструменты и технологии](#MyToolsAndTechnologies)
