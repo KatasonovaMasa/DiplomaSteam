@@ -19,12 +19,12 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("steamApi")
+@Feature("Апишка для тестов Steam")
+@Owner("Катасонова Мария")
 public class SteamRestApiTest {
 
     @Test
-    @Feature("Апишка для тестов Steam")
     @Story("Раздел Игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Проверка поиска игр")
     void searchJobApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -48,9 +48,7 @@ public class SteamRestApiTest {
     }
 
     @Test
-    @Feature("Апишка для тестов Steam")
     @Story("Раздел Игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -74,9 +72,7 @@ public class SteamRestApiTest {
     }
 
     @Test
-    @Feature("Апишка для тестов Steam")
     @Story("Раздел Игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -93,5 +89,20 @@ public class SteamRestApiTest {
                 .extract().as(ResultAddCart.class);
         assertEquals(true, data.isbAllowAppImpressions());
     }
-
+    @Test
+    @Story("Раздел Игр")
+    @DisplayName("Проверка доступа")
+    void AccessGamesApi() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        given()
+                .filter(withCustomTemplates())
+                .log().uri()
+                .contentType(ContentType.JSON)
+                .spec(Specs.responseAccess)
+                .when()
+                .get()
+                .then()
+                .statusCode(403)
+                .body(matchesJsonSchemaInClasspath("schemes/access.json"));
+    }
 }

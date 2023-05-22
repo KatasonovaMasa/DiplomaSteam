@@ -111,7 +111,6 @@ public class RunBrowserstackTests extends tests.TestBaseTwoDrivers {
             int start_y = (int) (size.height * 0.8);
             int end_y = (int) (size.height * 0.2);
 
-
             action
                     .press(point(x, start_y))
                     .waitAction(WaitOptions.waitOptions(Duration.of(timeOfSwipeMs, MILLIS)))

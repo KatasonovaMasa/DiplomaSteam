@@ -26,9 +26,10 @@ public class Specs {
             .log().all()
             .contentType(ContentType.JSON);
 
-    public static RequestSpecification responseCommunity = with()
+    public static RequestSpecification responseAccess  = with()
             .baseUri("https://store.steampowered.com")
-            .basePath("/communityrecommendations")
+            .basePath("/api")
+
             .log().all()
             .contentType(ContentType.JSON);
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
