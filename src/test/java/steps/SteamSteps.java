@@ -1,13 +1,17 @@
 package steps;
 
 import com.codeborne.selenide.Selenide;
+import config.AuthorizationConfig;
 import io.qameta.allure.Step;
+import org.aeonbits.owner.ConfigFactory;
 import pages.SteamElements;
 
 import static com.codeborne.selenide.Condition.visible;
 
+
 public class SteamSteps {
     SteamElements steamelements = new SteamElements();
+    static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
     @Step("Открытие сайта")
     public void openSteam(){
@@ -16,6 +20,14 @@ public class SteamSteps {
         steamelements.getEnglish().click();
     }
 
+    @Step("Авторизация")
+    public void openAvtorization(){
+        steamelements.in().click();
+        steamelements.login().setValue(config.login());
+        steamelements.password().setValue(config.password());
+        steamelements.sigIn().click();
+
+    }
     @Step("Открыть 'Магазин'")
     public void openShop() {
         steamelements.getOpenShop().click();

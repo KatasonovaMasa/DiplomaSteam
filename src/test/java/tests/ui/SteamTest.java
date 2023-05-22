@@ -1,33 +1,36 @@
 package tests.ui;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.http.ContentType;
-import models.ResultSearch;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.SteamSteps;
-import tests.Specs;
 import tests.TestBase;
+import tests.TestBase2;
 
-import static help.CustomApiListener2.withCustomTemplates;
-import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("UI aвтотесты")
-public class SteamTest extends TestBase {
+public class SteamTest extends TestBase2 {
     SteamSteps steamSteps = new SteamSteps();
+
+    @Test
+    @Story("Раздел игр")
+    @DisplayName("Авторизация на сайте")
+    void avtorization(){
+        steamSteps.openSteam();
+        steamSteps.openAvtorization();
+    }
+
 
     @Test
     @Story("Раздел Игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         steamSteps.openSteam();
+        steamSteps.openAvtorization();
         steamSteps.openShop();
         steamSteps.openCategories();
         steamSteps.openSectionSurvivalGames();
@@ -39,6 +42,7 @@ public class SteamTest extends TestBase {
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         steamSteps.openSteam();
+        steamSteps.openAvtorization();
         steamSteps.openCommunity();
         steamSteps.successActiveCommunity();
     }
@@ -48,6 +52,7 @@ public class SteamTest extends TestBase {
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
+        steamSteps.openAvtorization();
         steamSteps.setSearch();
         steamSteps.clickSearch();
         steamSteps.successSearchJob();
@@ -58,6 +63,7 @@ public class SteamTest extends TestBase {
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         steamSteps.openSteam();
+        steamSteps.openAvtorization();
         steamSteps.openGames();
         steamSteps.addGameToCart();
         steamSteps.successBasketGame();
@@ -69,6 +75,7 @@ public class SteamTest extends TestBase {
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         steamSteps.openSteam();
+        steamSteps.openAvtorization();
         steamSteps.addGameCart();
         steamSteps.deleteGameCart();
         steamSteps.successCartEmpty();

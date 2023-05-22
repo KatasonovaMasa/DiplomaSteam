@@ -6,6 +6,11 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class SteamElements {
     private final SelenideElement openShop = $x("//a[contains(text(),'STORE')]");
+    private final SelenideElement in = $x("//a[text()='login']");
+    private final SelenideElement login = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='text']");
+    private final SelenideElement password = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='password']");
+
+    private final SelenideElement sigIn = $x("//button[text()='Sign in']");
     private final SelenideElement openSectionSurvivalGames = $x("//a[contains(text(),'Survival')]");
     private final SelenideElement successSurvivalGames = $x("//div[text()='Survival']");
     private final SelenideElement openCommunity = $x("//a[contains(text(),'COMMUNITY')]");
@@ -29,6 +34,18 @@ public class SteamElements {
     }
     public SelenideElement getOpenShop(){
         return openShop;
+    }
+    public SelenideElement in(){
+        return in;
+    }
+    public SelenideElement sigIn(){
+        return sigIn;
+    }
+    public SelenideElement login(){
+        return login;
+    }
+    public SelenideElement password(){
+        return password;
     }
     public SelenideElement getOpenCategories(){
         return openCategories;
