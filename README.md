@@ -57,6 +57,7 @@
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
 <a id="cases-ui"></a>UI-кейсы:
+:heavy_check_mark: Авторизация на сайте</br>
 
 :heavy_check_mark: Наличия раздела игр из категории 'Выживание'</br>
 
@@ -80,6 +81,13 @@
 
 <a id="cases-mobile"></a>Mobile-кейсы:
 
+:heavy_check_mark: Авторизация в приложении</br>
+
+:heavy_check_mark: Поиск игр</br>
+
+:heavy_check_mark: Добавление игры в корзину</br>
+
+:heavy_check_mark: Удаление игры из корзину</br>
 
 
 
