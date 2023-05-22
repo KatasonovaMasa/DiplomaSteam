@@ -18,13 +18,13 @@ import static help.CustomApiListener2.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @Tag("steamUI")
+@Owner("Катасонова Мария")
 public class SteamTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
     @Feature("Автотесты")
     @Story("Раздел Игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         steamSteps.openSteam();
@@ -37,7 +37,6 @@ public class SteamTest extends TestBase {
     @Test
     @Feature("Автотесты")
     @Story("Разделы Активность сообщества")
-    @Owner("Катасонова Мария")
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         steamSteps.openSteam();
@@ -48,7 +47,6 @@ public class SteamTest extends TestBase {
     @Test
     @Feature("Автотесты")
     @Story("Раздел Игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
@@ -60,7 +58,6 @@ public class SteamTest extends TestBase {
     @Test
     @Feature("Автотесты")
     @Story("Корзина игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         steamSteps.openSteam();
@@ -73,7 +70,6 @@ public class SteamTest extends TestBase {
     @Test
     @Feature("Автотесты")
     @Story("Корзина игр")
-    @Owner("Катасонова Мария")
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         steamSteps.openSteam();
