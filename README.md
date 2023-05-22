@@ -2,7 +2,7 @@
 <img alt="GIPHY" src="/design/icons/STEAM.png">
 
 # <a name="TableOfContents">Содержание страницы</a>
-+ [:trophy: Мои инструменты и технологии](#MyToolsAndTechnologies)
++ [:trophy: Инструменты и технологии](#ToolsAndTechnologies)
 + [Описаниe](#Description)
 
 + [Проект](#Project)
@@ -21,7 +21,7 @@
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
 
-<a name="MyToolsAndTechnologies"><h2>:trophy: Мои инструменты и технологии</h2></a>
+<a name="ToolsAndTechnologies"><h2>:trophy: Инструменты и технологии</h2></a>
 <p  align="center">
   <a href="https://www.jetbrains.com/idea/"><code><img width="5%" title="IntelliJ IDEA" src="/design/icons/Intelij_IDEA.svg"></code></a>
   <a href="https://www.java.com/"><code><img width="5%" title="Java" src="/design/icons/Java.svg"></code></a>
