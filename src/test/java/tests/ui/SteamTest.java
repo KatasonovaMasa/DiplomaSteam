@@ -13,7 +13,7 @@ import tests.TestBase2;
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("UI aвтотесты")
-public class SteamTest extends TestBase2 {
+public class SteamTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
