@@ -69,6 +69,7 @@
   :open_file_folder: Удаление игры из корзину</br>
 
 <a id="cases-api"></a>API-кейсы:
+
 :heavy_check_mark: Открытие раздела игр из категории 'Выживание'</br>
 
 :heavy_check_mark: Поиск игр</br>
