@@ -13,7 +13,7 @@ import tests.TestBase2;
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("UI aвтотесты")
-public class SteamTest extends TestBase {
+public class SteamTest extends TestBase2 {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
@@ -22,6 +22,7 @@ public class SteamTest extends TestBase {
     void avtorization(){
         steamSteps.openSteam();
         steamSteps.openAvtorization();
+        steamSteps.logout();
     }
 
 
@@ -35,6 +36,7 @@ public class SteamTest extends TestBase {
         steamSteps.openCategories();
         steamSteps.openSectionSurvivalGames();
         steamSteps.successSurvivalGames();
+        steamSteps.logout();
     }
 
     @Test
@@ -45,6 +47,7 @@ public class SteamTest extends TestBase {
         steamSteps.openAvtorization();
         steamSteps.openCommunity();
         steamSteps.successActiveCommunity();
+        steamSteps.logout();
     }
 
     @Test
@@ -55,7 +58,9 @@ public class SteamTest extends TestBase {
         steamSteps.openAvtorization();
         steamSteps.setSearch();
         steamSteps.clickSearch();
+
         steamSteps.successSearchJob();
+        steamSteps.logout();
     }
 
     @Test
@@ -67,6 +72,7 @@ public class SteamTest extends TestBase {
         steamSteps.openGames();
         steamSteps.addGameToCart();
         steamSteps.successBasketGame();
+        steamSteps.logout();
     }
 
 
@@ -79,5 +85,6 @@ public class SteamTest extends TestBase {
         steamSteps.addGameCart();
         steamSteps.deleteGameCart();
         steamSteps.successCartEmpty();
+        steamSteps.logout();
     }
 }

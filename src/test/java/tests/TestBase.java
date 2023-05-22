@@ -39,7 +39,6 @@ public class TestBase {
 
     @AfterAll
     static void addAttachments () {
-        steamSteps.logout();
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();

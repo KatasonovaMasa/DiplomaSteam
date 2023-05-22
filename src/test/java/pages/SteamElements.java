@@ -14,7 +14,7 @@ public class SteamElements {
     private final SelenideElement openSectionSurvivalGames = $x("//a[contains(text(),'Survival')]");
     private final SelenideElement successSurvivalGames = $x("//div[text()='Survival']");
     private final SelenideElement openCommunity = $x("//a[contains(text(),'COMMUNITY')]");
-    private final SelenideElement checkActiveCommunity = $x("//div[text()='Community Activity']");
+    private final SelenideElement checkActiveCommunity = $x(" //div[@class='community_home_title']");
     private final SelenideElement checkActiveReference = $x("//*//*//div[text()='Recommended']");
     private final SelenideElement addGameToCart = $x("//div//*[(text()='Buy Cuphead')]/..//a[1]");
     private final SelenideElement successBasket = $x("//div//*[text()='Your Shopping Cart']");

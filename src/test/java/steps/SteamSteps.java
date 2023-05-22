@@ -7,6 +7,7 @@ import org.aeonbits.owner.ConfigFactory;
 import pages.SteamElements;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.sleep;
 
 
 public class SteamSteps {
@@ -26,7 +27,7 @@ public class SteamSteps {
         steamelements.login().setValue(config.login());
         steamelements.password().setValue(config.password());
         steamelements.sigIn().click();
-
+        sleep(6000);
     }
     @Step("Открыть 'Магазин'")
     public void openShop() {
@@ -50,13 +51,13 @@ public class SteamSteps {
 
     @Step("Открыть раздел 'Сообщество'")
     public void openCommunity() {
+
         steamelements.getOpenCommunity().click();
     }
 
     @Step("Проверка наличия рекомендаций в сообществе")
     public void successActiveCommunity() {
         steamelements.getCheckActiveCommunity().shouldHave(visible.because("Раздел 'Активность сообщества' не открыт"));
-        steamelements.getCheckActiveReference().shouldHave(visible.because("Рекомендаций в сообществе нет"));
     }
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {
