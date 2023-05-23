@@ -41,15 +41,7 @@
   <a href="https://git-scm.com/"><code><img width="5%" title="Github" src="/design/icons/Git.svg"></code></a>
   <a href="https://www.jenkins.io/"><code><img width="5%" title="Jenkins" src="/design/icons/Jenkins.svg"></code></a>
   <a href="https://www.atlassian.com/ru/software/jira"><code><img width="5%" title="Jira" src="/design/icons/Jira.svg"></code></a>
-  <a href="https://bitbucket.org/"><code><img width="5%" title="Bitbucket" src="/design/icons/Bitbucket.svg"></code></a>
   <a href="https://telegram.org/"><code><img width="5%" title="Telegram" src="/design/icons/Telegram.svg"></code></a>
-  <a href="https://www.jetbrains.com/ru-ru/pycharm/"><code><img width="5%" title="Pycharm" src="/design/icons/Pycharm.svg"></code></a>
-  <a href="https://www.postman.com/"><code><img width="5%" title="Postman" src="/design/icons/Postman.svg"></code></a>
-  <a href="https://www.atlassian.com/software/confluence"><code><img width="5%" title="Confluence" src="/design/icons/Confluence.svg"></code></a>
-  <a href="https://jmeter.apache.org/"><code><img width="5%" title="Jmeter" src="/design/icons/Jmeter.svg"></code></a>
-  <a href="https://www.jetbrains.com/ru-ru/youtrack/"><code><img width="5%" title="Yourtrack" src="/design/icons/Yourtrack.svg"></code></a>
-  <a href="https://www.docker.com/"><code><img width="5%" title="Docker" src="/design/icons/Docker.svg"></code></a>
-  <a href="https://swagger.io/"><code><img width="5%" title="Swagger" src="/design/icons/Swagger.svg"></code></a>
   <a href="https://rest-assured.io/"><code><img width="5%" title="REST-Assured" src="/design/icons/rest-assured-logo.svg"></code></a>
   <a href="https://www.browserstack.com/"><code><img width="5%" title="Browserstack" src="/design/icons/Browserstack.svg"></code></a>
   <a href="https://appium.io/"><code><img width="5%" title="Appium" src="/design/icons/Appium.svg"></code></a>
@@ -64,7 +56,12 @@
 `Selenoid` - для удаленного запуска браузеров в `Docker` контейнере.\
 `Allure Report` - для визуализации результатов тестирования.\
 `Telegram Bot` - для уведомлений о результатах тестирования.\
-`Allure TestOps` - система управления тестированием.
+`Allure TestOps` - система управления тестированием
+`Rest Assured` - выполняет роль обёртки над http клиентом
+`Appium` - используются для управления мобильным устройством с помощью веб драйвера
+`Browserstack` - для удаленного запуска мобильных автотестов
+`Android_Studio` - для эмулятора мобильного устройства и получения данных для подключения к apk
+.
 
 <a name="Project"><h2>Проект</h2></a>
 <a href="https://store.steampowered.com/"><code><img width="5%" title="Steam" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"></code></a> Проект по автоматизации тестирования для Steam, — онлайн-сервис цифрового распространения компьютерных игр и программ :star2:
@@ -105,10 +102,12 @@
 
 
 
-<a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборка в Jenkins<h2></a>
+<a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в Jenkins<h2></a>
 
 
-![This is an image](design/pictures/jenkins.jpeg)
+![This is an image](design/pictures/jenkins1.png)
+
+![This is an image](design/pictures/jenkins2.png)
 
 
 <a name="Build_Parameters_in_Jenkins"><h2>:clipboard: Параметры сборки в Jenkins:</h2></a>
@@ -154,7 +153,6 @@ gradle clean steamMobile
 Удаленный запуск:
 
 ```
-
 clean
 ${TASK}
 -Dbrowser=${BROWSER}
@@ -167,35 +165,38 @@ ${TASK}
 
 - <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
 
-![This is an image](design/pictures/allure.jpeg)
+![This is an image](design/pictures/allure.png)
 
 -  <a name="Allure_report2"><h3>Страница с проведенными тестами</h3></a>
 
-![This is an image](design/pictures/allure1.jpeg)
+![This is an image](design/pictures/allure1.png)
 
 <a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure TestOps</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
-![This is an image](design/pictures/allureTestsOp.jpeg)
+![This is an image](design/pictures/allureTestsOp.png)
 
 - <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в TestOps</h3></a>
 
-![This is an image](design/pictures/AllureTestOps1.jpeg)
+![This is an image](design/pictures/allureTestsOp1.png)
 
  <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с Jira</h2></a>
 
 - <a name="Page_Jira"><h3>Страница с задачей в Jira<h3></a>
 
-![This is an image](design/pictures/jira.jpeg)
+![This is an image](design/pictures/jira_task.png)
 
 <a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
 
-![This is an image](design/pictures/telegram.jpeg)
+![This is an image](design/pictures/telegram.png)
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
 https://user-images.githubusercontent.com/130640317/232434914-a22cc893-edd6-4bca-b6e3-ceeeea5fc83e.mp4
+
+https://github.com/KatasonovaMasa/Steam/assets/44576709/60e3ac76-b146-41d5-b8e5-f1bcb075ae5e
+
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 
