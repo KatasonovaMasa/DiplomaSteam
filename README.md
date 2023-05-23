@@ -28,6 +28,8 @@
 + [Страница с задачей в Jira](#Page_Jira)
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
+    + [Пример запуска тестов через selenoid](#Video1)
+    + [Пример запуска тестов через brawserstack](#Video2)
 
 <a name="ToolsAndTechnologies"><h2>:trophy: Инструменты и технологии</h2></a>
 <p  align="center">
@@ -198,11 +200,11 @@ ${TASK}
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
-- <a name="Video"><h3>Пример запуска тестов через selenoid</h3></a>
+- <a name="Video1"><h3>Пример запуска тестов через selenoid</h3></a>
 
 https://github.com/KatasonovaMasa/Steam/assets/44576709/127ae60c-9c68-4e27-9f70-06c7aef69da7
 
-- <a name="Video"><h3>Пример запуска тестов через brawserstack</h3></a>
+- <a name="Video2"><h3>Пример запуска тестов через brawserstack</h3></a>
 
 https://github.com/KatasonovaMasa/Steam/assets/44576709/60e3ac76-b146-41d5-b8e5-f1bcb075ae5e
 
