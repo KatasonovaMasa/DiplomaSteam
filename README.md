@@ -22,6 +22,8 @@
 + [:bar_chart: Интеграция с Allure TestOps](#Integration_Allure_TestOps)
     + [Экран с результатами запуска тестов](#Интеграция_с_Allure_TestOps1)
     + [Страница с тестами в TestOps](#Интеграция_с_Allure_TestOps2)
++ [:bar_chart: Примеры сборок в Brawserstack](#Integration_Brawserstack)
+  + [Экран с результатами запуска тестов](#Integration_Brawserstack)
 + [:chart_with_upwards_trend: Интеграция с Jira](#Integration_Jira)
 + [Страница с задачей в Jira](#Page_Jira)
 + [:iphone: Отчет в Telegram](#Telegram)
@@ -178,9 +180,9 @@ ${TASK}
 
 ![This is an image](design/pictures/allureTestsOp1.png)
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Примеры сборок в [Brawserstack](https://app-automate.browserstack.com/dashboard/v2/builds/6ce43e9d8252a282c5b3227aae9b96b0e0529f3d/sessions/74f9e6147da1a2ba8a56923f860b620fc5fe401a)</h2></a>
+<a name="Integration_Brawserstack"><h2>:bar_chart: Примеры сборок в [Brawserstack](https://app-automate.browserstack.com/dashboard/v2/builds/6ce43e9d8252a282c5b3227aae9b96b0e0529f3d/sessions/74f9e6147da1a2ba8a56923f860b620fc5fe401a)</h2></a>
 
-- <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
+- <a name="Integration_Brawserstack"><h3>Экран с результатами запуска тестов</h3></a>
 
 ![This is an image](design/pictures/Brawserstack.png)
 
