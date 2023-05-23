@@ -173,9 +173,16 @@ ${TASK}
 
 ![This is an image](design/pictures/allureTestsOp.png)
 
+
 - <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/launch/24091/tree?treeId=4235)</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp1.png)
+
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Примеры сборок в [Brawserstack](https://app-automate.browserstack.com/dashboard/v2/builds/6ce43e9d8252a282c5b3227aae9b96b0e0529f3d/sessions/74f9e6147da1a2ba8a56923f860b620fc5fe401a)</h2></a>
+
+- <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
+
+![This is an image](design/pictures/Brawserstack.png)
 
  <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с Jira</h2></a>
 
