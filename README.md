@@ -137,17 +137,13 @@ gradle clean steamUI
 ### <a id="console-api"></a>Локальный запуск API-тестов
 
 ```
-
 gradle clean steamApi
-
 ```
 
 ### <a id="console-mobile"></a>Локальный запуск Mobile-тестов
 
 ```
-
 gradle clean steamMobile
-
 ```
 
 Удаленный запуск:
