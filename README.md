@@ -198,7 +198,7 @@ ${TASK}
 https://github.com/KatasonovaMasa/Steam/assets/44576709/127ae60c-9c68-4e27-9f70-06c7aef69da7
 
 - <a name="Video"><h3>Пример запуска тестов через brawserstack</h3></a>
-- 
+
 https://github.com/KatasonovaMasa/Steam/assets/44576709/60e3ac76-b146-41d5-b8e5-f1bcb075ae5e
 
 
