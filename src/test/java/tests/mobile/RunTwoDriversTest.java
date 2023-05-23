@@ -69,9 +69,14 @@ public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
             $$(AppiumBy.className("android.view.ViewGroup")).get(4).click();
             sleep(15000);
             $$(AppiumBy.className("android.view.ViewGroup")).get(3).shouldHave(visible);
+            back();
+            back();
+            swipeUpQuick(12000);
+            swipeUpQuick(12000);
 
 
 
+            sleep(3000);
             $$(AppiumBy.className("android.view.ViewGroup")).get(1).click();
             sleep(5000);
             $(AppiumBy.className("android.widget.EditText")).sendKeys("Cuphead" + "\n");
@@ -86,7 +91,7 @@ public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
     @Order(3)
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
-        step("Авторизация", () -> {
+        step("Добавление игры в корзину", () -> {
             $$(AppiumBy.className("android.widget.EditText")).get(0).click();
             sleep(1000);
             $$(AppiumBy.className("android.widget.EditText")).get(0).sendKeys(config.login());
@@ -100,9 +105,9 @@ public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
             back();
             swipeUpQuick(12000);
             swipeUpQuick(12000);
-        });
 
-        step("Добавление игры в корзину", () -> {
+
+
             sleep(3000);
             $(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Steam\"]")).click();
             sleep(3000);
@@ -125,7 +130,7 @@ public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
     @Order(4)
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
-        step("Авторизация", () -> {
+        step("Удалить игру из корзины", () -> {
             $$(AppiumBy.className("android.widget.EditText")).get(0).click();
             sleep(1000);
             $$(AppiumBy.className("android.widget.EditText")).get(0).sendKeys(config.login());
@@ -139,8 +144,9 @@ public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
             back();
             swipeUpQuick(12000);
             swipeUpQuick(12000);
-        });
-        step("Удалить игру из корзины", () -> {
+
+
+
             sleep(3000);
             $(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Steam\"]")).click();
             sleep(3000);
