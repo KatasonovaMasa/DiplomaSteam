@@ -102,7 +102,7 @@
 
 
 
-<a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в Jenkins<h2></a>
+<a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)<h2></a>
 
 
 ![This is an image](design/pictures/jenkins1.png)
@@ -157,7 +157,7 @@ ${TASK}
 -Dbaseurl=${BASEURL}
 -Dselenoid_url=${SELENOID_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: Allure отчет</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/23/allure/) отчет</h2></a>
 
 - <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
 
@@ -167,19 +167,19 @@ ${TASK}
 
 ![This is an image](design/pictures/allure1.png)
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure TestOps</h2></a>
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure [TestOps](https://allure.autotests.cloud/launch/24091)</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp.png)
 
-- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в TestOps</h3></a>
+- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/launch/24091/tree?treeId=4235)</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp1.png)
 
  <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с Jira</h2></a>
 
-- <a name="Page_Jira"><h3>Страница с задачей в Jira<h3></a>
+- <a name="Page_Jira"><h3>Страница с задачей в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-675)<h3></a>
 
 ![This is an image](design/pictures/jira_task.png)
 
