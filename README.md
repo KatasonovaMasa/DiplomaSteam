@@ -43,6 +43,17 @@
   <a href="https://www.atlassian.com/ru/software/jira"><code><img width="5%" title="Jira" src="/design/icons/Jira.svg"></code></a>
   <a href="https://bitbucket.org/"><code><img width="5%" title="Bitbucket" src="/design/icons/Bitbucket.svg"></code></a>
   <a href="https://telegram.org/"><code><img width="5%" title="Telegram" src="/design/icons/Telegram.svg"></code></a>
+  <a href="https://www.jetbrains.com/ru-ru/pycharm/"><code><img width="5%" title="Pycharm" src="/design/icons/Pycharm.svg"></code></a>
+  <a href="https://www.postman.com/"><code><img width="5%" title="Postman" src="/design/icons/Postman.svg"></code></a>
+  <a href="https://www.atlassian.com/software/confluence"><code><img width="5%" title="Confluence" src="/design/icons/Confluence.svg"></code></a>
+  <a href="https://jmeter.apache.org/"><code><img width="5%" title="Jmeter" src="/design/icons/Jmeter.svg"></code></a>
+  <a href="https://www.jetbrains.com/ru-ru/youtrack/"><code><img width="5%" title="Yourtrack" src="/design/icons/Yourtrack.svg"></code></a>
+  <a href="https://www.docker.com/"><code><img width="5%" title="Docker" src="/design/icons/Docker.svg"></code></a>
+  <a href="https://swagger.io/"><code><img width="5%" title="Swagger" src="/design/icons/Swagger.svg"></code></a>
+  <a href="https://rest-assured.io/"><code><img width="5%" title="REST-Assured" src="/design/icons/rest-assured-logo.svg"></code></a>
+  <a href="https://www.browserstack.com/"><code><img width="5%" title="Browserstack" src="/design/icons/Browserstack.svg"></code></a>
+  <a href="https://appium.io/"><code><img width="5%" title="Appium" src="/design/icons/Appium.svg"></code></a>
+  <a href="https://developer.android.com/studio"><code><img width="5%" title="Android_Studio" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"></code></a>
 </p>
 
 <a name="Description"><h2>Описаниe</h2></a>
