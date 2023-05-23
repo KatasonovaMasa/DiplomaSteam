@@ -193,8 +193,12 @@ ${TASK}
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
-https://user-images.githubusercontent.com/130640317/232434914-a22cc893-edd6-4bca-b6e3-ceeeea5fc83e.mp4
+- <a name="Video"><h3>Пример запуска тестов через selenoid</h3></a>
 
+https://github.com/KatasonovaMasa/Steam/assets/44576709/127ae60c-9c68-4e27-9f70-06c7aef69da7
+
+- <a name="Video"><h3>Пример запуска тестов через brawserstack</h3></a>
+- 
 https://github.com/KatasonovaMasa/Steam/assets/44576709/60e3ac76-b146-41d5-b8e5-f1bcb075ae5e
 
 
