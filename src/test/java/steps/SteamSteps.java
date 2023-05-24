@@ -53,16 +53,6 @@ public class SteamSteps {
     public void openCommunity() {
         steamelements.getOpenCommunity().click();
     }
-    @Step("Открыть раздел SteamWorks")
-    public void openSteamWorks() {
-        steamelements.openSteamWorks().click();
-    }
-
-    @Step("Проверка открытия SteamWorks")
-    public void successOpenSteamWorks() {
-        steamelements.openSteamWorks().shouldHave(visible.because("Раздел SteamWorks не открыт"));
-    }
-
     @Step("Проверка наличия рекомендаций в сообществе")
     public void successActiveCommunity() {
         steamelements.getCheckActiveCommunity().shouldHave(visible.because("Раздел 'Активность сообщества' не открыт"));
