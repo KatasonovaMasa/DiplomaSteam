@@ -1,11 +1,10 @@
-package helpers;
+package help;
 
 
 import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
-import io.qameta.allure.restassured.AllureRestAssured;
 
-import static helpers.CustomApiListener.withCustomTemplates;
+import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 

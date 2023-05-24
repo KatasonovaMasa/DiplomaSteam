@@ -4,7 +4,6 @@ import config.AuthorizationConfig;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.WaitOptions;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -17,7 +16,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
 
 import java.time.Duration;
-import java.util.ArrayList;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -27,12 +25,13 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static io.qameta.allure.Allure.step;
 import static java.time.temporal.ChronoUnit.MILLIS;
 
-@Tag("steamApi")
+@Tag("steamMobile")
 @Feature("Aвтотесты для Steam")
 @Story("Автотесты для Mobile")
 @Owner("Катасонова Мария")
-public class RunTwoDriversTest extends tests.TestBaseBrowserstack {
+public class SteamMobileTest extends TestBase {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
+
 
     @Test
     @Order(1)

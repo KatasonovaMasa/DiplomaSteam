@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.Specs;
 
-import static help.CustomApiListener2.withCustomTemplates;
+import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("Aвтотесты для Steam")
 @Story("Автотесты для API")
 @Owner("Катасонова Мария")
-public class SteamRestApiTest {
+public class SteamApiTest {
 
     @Test
     @DisplayName("Проверка поиска игр")
