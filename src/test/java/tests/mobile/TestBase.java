@@ -2,7 +2,7 @@ package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackDriver;
-import helpers.Attach;
+import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,7 +29,7 @@ public class TestBase {
     public void afterEach() {
         String sessionId = sessionId().toString();
         closeWebDriver();
-        Attach.addVideo(sessionId);
+        Attach.addVideos(sessionId);
     }
 
 }
