@@ -69,8 +69,8 @@ public class SteamSteps {
     @Step("Проверка открытия SteamWorks")
     public void successOpenSteamWorks() {
         switchTo().window(1);
-        Configuration.pageLoadStrategy = "eager";
         steamelements.successOpenSteamWorks().shouldHave(hidden.because("Раздел SteamWorks не открыт"));
+        switchTo().window(0);
     }
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {
