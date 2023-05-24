@@ -92,6 +92,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @Tag("steamUITwo")
     @DisplayName("Работы в Steam")
     void jobsInSteam() {
         steamSteps.openSteam();
