@@ -1,4 +1,4 @@
-package tests;
+package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackDriver;
@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static io.qameta.allure.Allure.step;
 
-public class TestBaseTwoDrivers {
+public class TestBase {
     static String deviceHost = System.getProperty("deviceHost");
     @BeforeAll
     public static void setup() {

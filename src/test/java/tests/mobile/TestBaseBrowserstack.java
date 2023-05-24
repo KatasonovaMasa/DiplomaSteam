@@ -1,4 +1,4 @@
-package tests;
+package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Driver;
