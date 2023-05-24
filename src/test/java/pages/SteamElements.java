@@ -34,7 +34,7 @@ public class SteamElements {
     public SelenideElement openSteamWorks() {
         return opensSteamWorks;
     }
-    private final SelenideElement successOpenSteamWorks = $x("//*[@id='login_btn_joinsteamworks']//font[text()='Join Steamworks']");
+    private final SelenideElement successOpenSteamWorks = $x("//*[@id='login_form']//font[text()='Login to Steamworks']");
     public SelenideElement successOpenSteamWorks(){
         return successOpenSteamWorks;
     }
