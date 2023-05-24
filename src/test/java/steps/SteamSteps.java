@@ -72,6 +72,20 @@ public class SteamSteps {
         steamelements.successOpenSteamWorks().shouldHave(hidden.because("Раздел SteamWorks не открыт"));
         switchTo().window(0);
     }
+
+    @Step("Открыть раздел Jobs")
+    public void openJobsSteam() {
+        steamelements.openJobs().scrollTo().click();
+    }
+    @Step("Проверка открытия SteamWorks")
+    public void successJobsSoftwareEngineering() {
+        switchTo().window(1);
+        steamelements.openSoftwareEngineering().click();
+        steamelements.successJobsSoftwareEngineering().shouldHave(hidden.because("Работы Software Engineering в Steam нет"));
+        switchTo().window(0);
+    }
+
+
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {
         steamelements.setSearch().setValue("Cuphead");

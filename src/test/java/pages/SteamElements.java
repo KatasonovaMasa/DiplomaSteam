@@ -31,14 +31,24 @@ public class SteamElements {
     private final SelenideElement logout = $x("//a[@href='javascript:Logout();']");
 
     private final SelenideElement opensSteamWorks = $x("//a[text()='Steamworks']");
-    public SelenideElement openSteamWorks() {
-        return opensSteamWorks;
-    }
+    public SelenideElement openSteamWorks() {return opensSteamWorks;}
     private final SelenideElement successOpenSteamWorks = $x("//span[text()='Присоединиться к Steamworks']");
-    public SelenideElement successOpenSteamWorks(){
-        return successOpenSteamWorks;
+
+    private final SelenideElement openJobs = $x("//a[text()='Jobs']");
+    private final SelenideElement openSoftwareEngineering = $x("//a[text()='Software Engineering']");
+
+    private final SelenideElement successJobsSoftwareEngineering = $x("//h5[normalize-space()='Steam Software Engineer']");
+    public SelenideElement openJobs() {
+        return openJobs;
+    }
+    public SelenideElement successJobsSoftwareEngineering() {
+        return successJobsSoftwareEngineering;
+    }
+    public SelenideElement openSoftwareEngineering() {
+        return openSoftwareEngineering;
     }
 
+    public SelenideElement successOpenSteamWorks(){return successOpenSteamWorks;}
     public SelenideElement logout(){
         return logout;
     }

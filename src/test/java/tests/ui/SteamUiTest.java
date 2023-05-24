@@ -48,8 +48,8 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
-    @Tag("steamUITwo")
-    void name() {
+    @DisplayName("Открытие раздела SteamWorks")
+    void openSteamWorks() {
         steamSteps.openSteam();
         steamSteps.openAvtorization();
         steamSteps.openSteamWorks();
@@ -88,6 +88,16 @@ public class SteamUiTest extends TestBase {
         steamSteps.addGameCart();
         steamSteps.deleteGameCart();
         steamSteps.successCartEmpty();
+        steamSteps.logout();
+    }
+
+    @Test
+    @DisplayName("Работы в Steam")
+    void jobsInSteam() {
+        steamSteps.openSteam();
+        steamSteps.openAvtorization();
+        steamSteps.openJobsSteam();
+        steamSteps.successJobsSoftwareEngineering();
         steamSteps.logout();
     }
 }
