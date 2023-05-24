@@ -1,13 +1,16 @@
 package steps;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.AuthorizationConfig;
 import io.qameta.allure.Step;
 import org.aeonbits.owner.ConfigFactory;
 import pages.SteamElements;
 
+import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 
 public class SteamSteps {
@@ -51,14 +54,38 @@ public class SteamSteps {
 
     @Step("Открыть раздел 'Сообщество'")
     public void openCommunity() {
-
         steamelements.getOpenCommunity().click();
     }
-
     @Step("Проверка наличия рекомендаций в сообществе")
     public void successActiveCommunity() {
         steamelements.getCheckActiveCommunity().shouldHave(visible.because("Раздел 'Активность сообщества' не открыт"));
     }
+
+    @Step("Открыть раздел SteamWorks")
+    public void openSteamWorks() {
+        steamelements.openSteamWorks().scrollTo().click();
+    }
+
+    @Step("Проверка открытия SteamWorks")
+    public void successOpenSteamWorks() {
+        switchTo().window(1);
+        steamelements.successOpenSteamWorks().shouldHave(hidden.because("Раздел SteamWorks не открыт"));
+        switchTo().window(0);
+    }
+
+    @Step("Открыть раздел Jobs")
+    public void openJobsSteam() {
+        steamelements.openJobs().scrollTo().click();
+    }
+    @Step("Проверка открытия SteamWorks")
+    public void successJobsSoftwareEngineering() {
+        switchTo().window(1);
+        steamelements.openSoftwareEngineering().click();
+        steamelements.successJobsSoftwareEngineering().shouldHave(hidden.because("Работы Software Engineering в Steam нет"));
+        switchTo().window(0);
+    }
+
+
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {
         steamelements.setSearch().setValue("Cuphead");

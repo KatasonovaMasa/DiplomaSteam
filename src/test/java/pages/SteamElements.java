@@ -9,7 +9,6 @@ public class SteamElements {
     private final SelenideElement in = $x("//a[text()='login']");
     private final SelenideElement login = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='text']");
     private final SelenideElement password = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='password']");
-
     private final SelenideElement sigIn = $x("//button[text()='Sign in']");
     private final SelenideElement openSectionSurvivalGames = $x("//a[contains(text(),'Survival')]");
     private final SelenideElement successSurvivalGames = $x("//div[text()='Survival']");
@@ -30,6 +29,26 @@ public class SteamElements {
     private final SelenideElement languageSelection = $x("//*[@id='language_pulldown']");
     private final SelenideElement english = $x("//a[contains(text(),'English (английский)')]");
     private final SelenideElement logout = $x("//a[@href='javascript:Logout();']");
+
+    private final SelenideElement opensSteamWorks = $x("//a[text()='Steamworks']");
+    public SelenideElement openSteamWorks() {return opensSteamWorks;}
+    private final SelenideElement successOpenSteamWorks = $x("//span[text()='Присоединиться к Steamworks']");
+
+    private final SelenideElement openJobs = $x("//a[text()='Jobs']");
+    private final SelenideElement openSoftwareEngineering = $x("//a[text()='Software Engineering']");
+
+    private final SelenideElement successJobsSoftwareEngineering = $x("//h5[normalize-space()='Steam Software Engineer']");
+    public SelenideElement openJobs() {
+        return openJobs;
+    }
+    public SelenideElement successJobsSoftwareEngineering() {
+        return successJobsSoftwareEngineering;
+    }
+    public SelenideElement openSoftwareEngineering() {
+        return openSoftwareEngineering;
+    }
+
+    public SelenideElement successOpenSteamWorks(){return successOpenSteamWorks;}
     public SelenideElement logout(){
         return logout;
     }

@@ -1,4 +1,4 @@
-package models;
+package drivers.models;
 
 public class ResultAddCart {
     private boolean bAllowAppImpressions;
