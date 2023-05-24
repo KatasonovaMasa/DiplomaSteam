@@ -29,7 +29,7 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 @Feature("Aвтотесты для Steam")
 @Story("Автотесты для Mobile")
 @Owner("Катасонова Мария")
-public class SteamMobileTest extends tests.TestBase {
+public class SteamMobileTest extends TestBaseBrowserstack {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
 

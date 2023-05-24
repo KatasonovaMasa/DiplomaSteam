@@ -1,17 +1,26 @@
 package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Driver;
 import drivers.BrowserstackDriver;
 import helpers.Attach;
+import helpers.Browserstack;
+import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.selenide.AllureSelenide;
+import io.appium.java_client.AppiumDriver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterSuite;
+
+import java.net.URL;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
-public class TestBase {
+public class TestBaseBrowserstack {
     @BeforeAll
     public static void setup() {
             Configuration.browser = BrowserstackDriver.class.getName();
