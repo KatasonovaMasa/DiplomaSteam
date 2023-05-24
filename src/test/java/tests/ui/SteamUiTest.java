@@ -92,7 +92,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Работы в Steam")
+    @DisplayName("Работа в Steam")
     void jobsInSteam() {
         steamSteps.openSteam();
         steamSteps.openAvtorization();
