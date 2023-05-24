@@ -34,7 +34,7 @@ public class SteamElements {
     public SelenideElement openSteamWorks() {
         return opensSteamWorks;
     }
-    private final SelenideElement successOpenSteamWorks = $x("//*[contains(@class, 'main_nav_content')]//*[contains(@class, 'steamworks_logo')]");
+    private final SelenideElement successOpenSteamWorks = $x("//html/head/title");
     public SelenideElement successOpenSteamWorks(){
         return successOpenSteamWorks;
     }
