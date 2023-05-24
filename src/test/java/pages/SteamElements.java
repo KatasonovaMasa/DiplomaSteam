@@ -34,7 +34,7 @@ public class SteamElements {
     public SelenideElement openSteamWorks() {
         return opensSteamWorks;
     }
-    private final SelenideElement successOpenSteamWorks = $x("//html/head/title");
+    private final SelenideElement successOpenSteamWorks = $x("//span[text()='Присоединиться к Steamworks']");
     public SelenideElement successOpenSteamWorks(){
         return successOpenSteamWorks;
     }

@@ -7,6 +7,7 @@ import io.qameta.allure.Step;
 import org.aeonbits.owner.ConfigFactory;
 import pages.SteamElements;
 
+import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.switchTo;
@@ -69,7 +70,7 @@ public class SteamSteps {
     public void successOpenSteamWorks() {
         switchTo().window(1);
         Configuration.pageLoadStrategy = "eager";
-        steamelements.successOpenSteamWorks().shouldHave(visible.because("Раздел SteamWorks не открыт"));
+        steamelements.successOpenSteamWorks().shouldHave(hidden.because("Раздел SteamWorks не открыт"));
     }
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {
