@@ -3,7 +3,7 @@ package tests.mobile;
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackDriver;
 import drivers.LocalDriver;
-import helpers.Attach;
+import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -42,9 +42,9 @@ public class TestBaseNO {
         //  Attach.screenshotAs("Last screenshot");
         // Attach.pageSource();
         closeWebDriver();
-        Attach.addVideo(sessionId);
+        Attach.addVideos(sessionId);
         if (deviceHost.equals("browserstack")) {
-            Attach.addVideo(sessionId);
+            Attach.addVideos(sessionId);
         }
     }
 }
