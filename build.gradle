@@ -121,6 +121,11 @@ task steamUI(type: Test) {
         includeTags ("steamUI")
     }
 }
+task steamUITwo(type: Test) {
+    useJUnitPlatform {
+        includeTags ("steamUITwo")
+    }
+}
 
 task steamApi(type: Test){
     useJUnitPlatform{

@@ -48,6 +48,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @Tag("steamUITwo")
     void name() {
         steamSteps.openSteam();
         steamSteps.openAvtorization();
