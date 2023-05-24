@@ -1,5 +1,6 @@
 package steps;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.AuthorizationConfig;
 import io.qameta.allure.Step;
@@ -67,6 +68,7 @@ public class SteamSteps {
     @Step("Проверка открытия SteamWorks")
     public void successOpenSteamWorks() {
         switchTo().window(1);
+        Configuration.pageLoadStrategy = "eager";
         steamelements.successOpenSteamWorks().shouldHave(visible.because("Раздел SteamWorks не открыт"));
     }
     @Step("Ввести в поиск 'Cuphead'")

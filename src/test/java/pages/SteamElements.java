@@ -38,6 +38,7 @@ public class SteamElements {
     public SelenideElement successOpenSteamWorks(){
         return successOpenSteamWorks;
     }
+
     public SelenideElement logout(){
         return logout;
     }
