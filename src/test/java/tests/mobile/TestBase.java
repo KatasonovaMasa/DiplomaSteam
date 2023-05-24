@@ -11,9 +11,8 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static io.qameta.allure.Allure.step;
 
-public class TestBase2 {
+public class TestBase {
         static String deviceHost = System.getProperty("deviceHost");
         @BeforeAll
         public static void setup() {
