@@ -48,13 +48,22 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @DisplayName("Открытие раздела SteamWorks")
+    void openSteamWorks() {
+        steamSteps.openSteam();
+        steamSteps.openAvtorization();
+        steamSteps.openSteamWorks();
+        steamSteps.successOpenSteamWorks();
+        steamSteps.logout();
+    }
+
+    @Test
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
         steamSteps.openAvtorization();
         steamSteps.setSearch();
         steamSteps.clickSearch();
-
         steamSteps.successSearchJob();
         steamSteps.logout();
     }

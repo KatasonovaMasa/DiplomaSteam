@@ -6,8 +6,8 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.http.ContentType;
-import models.ResultAddCart;
-import models.ResultSearch;
+import drivers.models.ResultAddCart;
+import drivers.models.ResultSearch;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -87,6 +87,7 @@ public class SteamApiTest {
                 .extract().as(ResultAddCart.class);
         assertEquals(true, data.isbAllowAppImpressions());
     }
+
     @Test
     @DisplayName("Проверка доступа")
     void AccessGamesApi() {

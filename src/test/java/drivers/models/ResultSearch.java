@@ -1,4 +1,4 @@
-package models;
+package drivers.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
