@@ -8,6 +8,7 @@ import pages.SteamElements;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 
 public class SteamSteps {
@@ -56,6 +57,17 @@ public class SteamSteps {
     @Step("Проверка наличия рекомендаций в сообществе")
     public void successActiveCommunity() {
         steamelements.getCheckActiveCommunity().shouldHave(visible.because("Раздел 'Активность сообщества' не открыт"));
+    }
+
+    @Step("Открыть раздел SteamWorks")
+    public void openSteamWorks() {
+        steamelements.openSteamWorks().scrollTo().click();
+    }
+
+    @Step("Проверка открытия SteamWorks")
+    public void successOpenSteamWorks() {
+        switchTo().window(1);
+        steamelements.successOpenSteamWorks().shouldHave(visible.because("Раздел SteamWorks не открыт"));
     }
     @Step("Ввести в поиск 'Cuphead'")
     public void setSearch() {

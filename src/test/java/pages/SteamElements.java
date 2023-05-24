@@ -30,6 +30,14 @@ public class SteamElements {
     private final SelenideElement english = $x("//a[contains(text(),'English (английский)')]");
     private final SelenideElement logout = $x("//a[@href='javascript:Logout();']");
 
+    private final SelenideElement opensSteamWorks = $x("//a[text()='Steamworks']");
+    public SelenideElement openSteamWorks() {
+        return opensSteamWorks;
+    }
+    private final SelenideElement successOpenSteamWorks = $x("//span[text()='Присоединиться к Steamworks']");
+    public SelenideElement successOpenSteamWorks(){
+        return successOpenSteamWorks;
+    }
     public SelenideElement logout(){
         return logout;
     }
