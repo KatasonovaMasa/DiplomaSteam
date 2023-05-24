@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("Aвтотесты для Steam")
 @Story("Автотесты для API")
 @Owner("Катасонова Мария")
-public class SteamRestApiTest {
+public class SteamApiTest {
 
     @Test
     @DisplayName("Проверка поиска игр")

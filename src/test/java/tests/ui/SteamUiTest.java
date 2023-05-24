@@ -8,13 +8,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.SteamSteps;
 import tests.TestBase;
-import tests.TestBase2;
 
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("Aвтотесты для Steam")
 @Story("Автотесты для UI")
-public class SteamTest extends TestBase {
+public class SteamUiTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
