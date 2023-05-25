@@ -1,4 +1,4 @@
-# UI, API и Mobile автотесты для сайта [STEAM](https://store.steampowered.com/)
+# UI, API и Mobile автотесты для сайта [STEAM](https://store.steampowered.com/) — онлайн-сервис цифрового распространения компьютерных игр и программ, разработанный и поддерживаемый компанией Valve.
 <img alt="GIPHY" src="/design/icons/STEAM.png">
 
 # <a name="TableOfContents">Содержание страницы</a>
