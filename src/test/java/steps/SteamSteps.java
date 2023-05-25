@@ -1,6 +1,5 @@
 package steps;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.AuthorizationConfig;
 import io.qameta.allure.Step;
@@ -25,7 +24,7 @@ public class SteamSteps {
     }
 
     @Step("Авторизация")
-    public void openAvtorization(){
+    public void openAuthorization(){
         steamelements.in().click();
         steamelements.login().setValue(config.login());
         steamelements.password().setValue(config.password());
