@@ -1,6 +1,5 @@
 package steps;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import config.AuthorizationConfig;
 import io.qameta.allure.Step;
@@ -25,7 +24,7 @@ public class SteamSteps {
     }
 
     @Step("Авторизация")
-    public void openAvtorization(){
+    public void openAuthorization(){
         steamelements.in().click();
         steamelements.login().setValue(config.login());
         steamelements.password().setValue(config.password());
@@ -81,7 +80,7 @@ public class SteamSteps {
     public void successJobsSoftwareEngineering() {
         switchTo().window(1);
         steamelements.openSoftwareEngineering().click();
-        steamelements.successJobsSoftwareEngineering().shouldHave(hidden.because("Работы Software Engineering в Steam нет"));
+        steamelements.successJobsSoftwareEngineering().shouldHave(visible.because("Работы Software Engineering в Steam нет"));
         switchTo().window(0);
     }
 

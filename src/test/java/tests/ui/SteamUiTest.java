@@ -18,9 +18,9 @@ public class SteamUiTest extends TestBase {
 
     @Test
     @DisplayName("Авторизация на сайте")
-    void avtorization(){
+    void authorization(){
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.logout();
     }
 
@@ -29,7 +29,7 @@ public class SteamUiTest extends TestBase {
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.openShop();
         steamSteps.openCategories();
         steamSteps.openSectionSurvivalGames();
@@ -41,27 +41,19 @@ public class SteamUiTest extends TestBase {
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.openCommunity();
         steamSteps.successActiveCommunity();
         steamSteps.logout();
     }
 
-    @Test
-    @DisplayName("Открытие раздела SteamWorks")
-    void openSteamWorks() {
-        steamSteps.openSteam();
-        steamSteps.openAvtorization();
-        steamSteps.openSteamWorks();
-        steamSteps.successOpenSteamWorks();
-        steamSteps.logout();
-    }
+
 
     @Test
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.setSearch();
         steamSteps.clickSearch();
         steamSteps.successSearchJob();
@@ -72,7 +64,7 @@ public class SteamUiTest extends TestBase {
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.openGames();
         steamSteps.addGameToCart();
         steamSteps.successBasketGame();
@@ -84,10 +76,19 @@ public class SteamUiTest extends TestBase {
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.addGameCart();
         steamSteps.deleteGameCart();
         steamSteps.successCartEmpty();
+        steamSteps.logout();
+    }
+    @Test
+    @DisplayName("Открытие раздела SteamWorks")
+    void openSteamWorks() {
+        steamSteps.openSteam();
+        steamSteps.openAuthorization();
+        steamSteps.openSteamWorks();
+        steamSteps.successOpenSteamWorks();
         steamSteps.logout();
     }
 
@@ -95,7 +96,7 @@ public class SteamUiTest extends TestBase {
     @DisplayName("Работы в Steam")
     void jobsInSteam() {
         steamSteps.openSteam();
-        steamSteps.openAvtorization();
+        steamSteps.openAuthorization();
         steamSteps.openJobsSteam();
         steamSteps.successJobsSoftwareEngineering();
         steamSteps.logout();
