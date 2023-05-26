@@ -11,12 +11,11 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
-public class BaseTest {
+public class TestBase {
     @BeforeAll
     public static void setup() {
             Configuration.browser = BrowserstackDriver.class.getName();
             Configuration.browserSize = null;
-
         }
 
     @BeforeEach
