@@ -106,5 +106,4 @@ public class SteamApiTest {
                 .statusCode(403)
                 .body(matchesJsonSchemaInClasspath("schemes/access.json"));
     }
-
 }
