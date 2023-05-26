@@ -6,8 +6,10 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.http.ContentType;
-import drivers.models.ResultAddCart;
-import drivers.models.ResultSearch;
+import lombok.ResultSearch;
+import lombok.SteamNews;
+import models.ResultAddCart;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,6 +17,7 @@ import org.junit.jupiter.api.Test;
 import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -91,7 +94,7 @@ public class SteamApiTest {
     }
 
     @Test
-    @Story("Доступ")
+    @Story("Ограничение доступа")
     @DisplayName("Проверка доступа")
     void AccessGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -99,11 +102,31 @@ public class SteamApiTest {
                 .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
-                .spec(Specification.responseAccess)
+                .spec(Specification.requestAccess)
                 .when()
                 .get()
                 .then()
                 .statusCode(403)
                 .body(matchesJsonSchemaInClasspath("schemes/access.json"));
+    }
+
+    @Test
+    @Story("")
+    @DisplayName("Проверка новостей по игре")
+    void checkingGameNews() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        SteamNews data = given()
+                .filter(withCustomTemplates())
+                .contentType(ContentType.JSON)
+                .queryParam("appid", 100)
+                .queryParam("count", 3)
+                .spec(Specification.requestNewsGames)
+                .when()
+                .get()
+                .then()
+                .log().body()
+                .extract().as(SteamNews.class);
+        Assertions.assertEquals(1499722448, data.getAppnews().getNewsitems().get(0).getDate());
+        assertThat(1499722448).isEqualTo(data.getAppnews().getNewsitems().get(0).getDate());
     }
 }

@@ -26,9 +26,15 @@ public class Specification {
             .log().all()
             .contentType(ContentType.JSON);
 
-    public static RequestSpecification responseAccess  = with()
+    public static RequestSpecification requestAccess = with()
             .baseUri("https://store.steampowered.com")
             .basePath("/api")
+
+            .log().all()
+            .contentType(ContentType.JSON);
+    public static RequestSpecification requestNewsGames  = with()
+            .baseUri("http://api.steampowered.com/")
+            .basePath("ISteamNews/GetNewsForApp/v0002/?")
 
             .log().all()
             .contentType(ContentType.JSON);
