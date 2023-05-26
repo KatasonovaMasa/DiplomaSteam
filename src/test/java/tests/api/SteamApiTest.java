@@ -17,6 +17,7 @@ import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("steamApi")
 @Feature("Aвтотесты для Steam")
@@ -85,7 +86,7 @@ public class SteamApiTest {
                 .then()
                 .spec(Specs.responseSpec)
                 .extract().as(ResultAddCart.class);
-        assertEquals(true, data.isbAllowAppImpressions());
+        assertTrue(data.isbAllowAppImpressions());
     }
 
     @Test
@@ -103,4 +104,5 @@ public class SteamApiTest {
                 .statusCode(403)
                 .body(matchesJsonSchemaInClasspath("schemes/access.json"));
     }
+
 }
