@@ -20,11 +20,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("steamApi")
 @Feature("Автотесты для API")
-@Story("Автотесты для API")
 @Owner("Катасонова Мария")
 public class SteamApiTest {
 
     @Test
+    @Story("Раздел игр")
     @DisplayName("Проверка поиска игр")
     void searchJobApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -48,6 +48,7 @@ public class SteamApiTest {
     }
 
     @Test
+    @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -71,6 +72,7 @@ public class SteamApiTest {
     }
 
     @Test
+    @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -89,6 +91,7 @@ public class SteamApiTest {
     }
 
     @Test
+    @Story("Доступ")
     @DisplayName("Проверка доступа")
     void AccessGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
