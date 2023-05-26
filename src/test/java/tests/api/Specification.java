@@ -1,4 +1,4 @@
-package tests;
+package tests.api;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -7,7 +7,7 @@ import io.restassured.specification.ResponseSpecification;
 
 import static io.restassured.RestAssured.with;
 
-public class Specs {
+public class Specification {
     public static RequestSpecification requestSearch = with()
             .baseUri("https://store.steampowered.com")
             .basePath("/search/results")

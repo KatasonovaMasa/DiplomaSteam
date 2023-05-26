@@ -7,16 +7,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.SteamSteps;
-import tests.TestBase;
 
 @Tag("steamUI")
 @Owner("Катасонова Мария")
-@Feature("Aвтотесты для Steam")
-@Story("Автотесты для UI")
+@Feature("Автотесты для UI")
 public class SteamUiTest extends TestBase {
     SteamSteps steamSteps = new SteamSteps();
 
     @Test
+    @Story("Авторизация на сайте")
     @DisplayName("Авторизация на сайте")
     void authorization(){
         steamSteps.openSteam();
@@ -26,6 +25,7 @@ public class SteamUiTest extends TestBase {
 
 
     @Test
+    @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         steamSteps.openSteam();
@@ -50,6 +50,7 @@ public class SteamUiTest extends TestBase {
 
 
     @Test
+    @Story("Раздел игр")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         steamSteps.openSteam();
@@ -61,6 +62,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         steamSteps.openSteam();
@@ -73,6 +75,7 @@ public class SteamUiTest extends TestBase {
 
 
     @Test
+    @Story("Корзина")
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         steamSteps.openSteam();
@@ -83,6 +86,7 @@ public class SteamUiTest extends TestBase {
         steamSteps.logout();
     }
     @Test
+    @Story("Игтеграция с другими сервисами")
     @DisplayName("Открытие раздела SteamWorks")
     void openSteamWorks() {
         steamSteps.openSteam();
@@ -93,6 +97,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @Story("Игтеграция с другими сервисами")
     @DisplayName("Работы в Steam")
     void jobsInSteam() {
         steamSteps.openSteam();

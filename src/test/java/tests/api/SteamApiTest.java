@@ -11,7 +11,6 @@ import drivers.models.ResultSearch;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.Specs;
 
 import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
@@ -20,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("steamApi")
-@Feature("Aвтотесты для Steam")
+@Feature("Автотесты для API")
 @Story("Автотесты для API")
 @Owner("Катасонова Мария")
 public class SteamApiTest {
@@ -37,11 +36,11 @@ public class SteamApiTest {
                 .queryParam("term", "Cuphead")
                 .queryParam("supportedlang", "russian")
                 .queryParam("infinite", "1")
-                .spec(Specs.requestSearch)
+                .spec(Specification.requestSearch)
                 .when()
                 .get("/results/?query")
                 .then()
-                .spec(Specs.responseSpec)
+                .spec(Specification.responseSpec)
                 .log().body()
                 .extract().as(ResultSearch.class);
         assertEquals(1, data.getSuccess());
@@ -62,11 +61,11 @@ public class SteamApiTest {
                 .queryParam("flavor", "popularpurchased")
                 .queryParam("strContentHubType", "category")
                 .queryParam("strContentHubCategory", "survival")
-                .spec(Specs.requestOpen)
+                .spec(Specification.requestOpen)
                 .when()
                 .get("cc=RU&l=english")
                 .then()
-                .spec(Specs.responseSpec)
+                .spec(Specification.responseSpec)
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemes/openCategories.json"));
     }
@@ -80,11 +79,11 @@ public class SteamApiTest {
                 .log().uri()
                 .contentType(ContentType.JSON)
                 .queryParam("cc", "RU")
-                .spec(Specs.requestAddCard)
+                .spec(Specification.requestAddCard)
                 .when()
                 .get()
                 .then()
-                .spec(Specs.responseSpec)
+                .spec(Specification.responseSpec)
                 .extract().as(ResultAddCart.class);
         assertTrue(data.isbAllowAppImpressions());
     }
@@ -97,7 +96,7 @@ public class SteamApiTest {
                 .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
-                .spec(Specs.responseAccess)
+                .spec(Specification.responseAccess)
                 .when()
                 .get()
                 .then()
