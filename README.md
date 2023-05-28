@@ -22,6 +22,7 @@
 + [:bar_chart: Интеграция с Allure TestOps](#Integration_Allure_TestOps)
     + [Экран с результатами запуска тестов](#Интеграция_с_Allure_TestOps1)
     + [Страница с тестами в TestOps](#Интеграция_с_Allure_TestOps2)
+    + [Страница с тестами из Launches в Allure TestOps](#Интеграция_с_Allure_TestOps3)
 + [:bar_chart: Примеры сборок в Brawserstack](#Integration_Brawserstack)
   + [Экран с результатами запуска тестов](#Integration_Brawserstack)
 + [:chart_with_upwards_trend: Интеграция с Jira](#Integration_Jira)
@@ -162,7 +163,7 @@ ${TASK}
 -Dbaseurl=${BASEURL}
 -Dselenoid_url=${SELENOID_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/23/allure/) отчет</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/135/allure/) отчет</h2></a>
 
 - <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
 
@@ -172,16 +173,20 @@ ${TASK}
 
 ![This is an image](design/pictures/allure1.png)
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure [TestOps](https://allure.autotests.cloud/launch/24091)</h2></a>
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure [TestOps](https://allure.autotests.cloud/launch/24406)</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp.png)
 
 
-- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/launch/24091/tree?treeId=4235)</h3></a>
+- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/project/2188/test-cases?treeId=4235)</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp1.png)
+
+- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24406)</h3></a>
+
+![This is an image](design/pictures/allureTestsOp2.png)
 
 <a name="Integration_Brawserstack"><h2>:bar_chart: Примеры сборок в [Brawserstack](https://app-automate.browserstack.com/dashboard/v2/builds/6ce43e9d8252a282c5b3227aae9b96b0e0529f3d/sessions/74f9e6147da1a2ba8a56923f860b620fc5fe401a)</h2></a>
 
