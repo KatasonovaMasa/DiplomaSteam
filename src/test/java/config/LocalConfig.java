@@ -6,7 +6,6 @@ import org.aeonbits.owner.Config;
         "classpath:${env}.properties"
 })
 public interface LocalConfig extends Config {
-
     @Key("deviceName")
     @DefaultValue("OnePlus 9")
         String deviceName();

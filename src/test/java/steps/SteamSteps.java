@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.switchTo;
 
-
 public class SteamSteps {
     SteamElements steamelements = new SteamElements();
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());

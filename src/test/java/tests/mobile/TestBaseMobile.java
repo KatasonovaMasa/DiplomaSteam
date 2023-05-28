@@ -30,5 +30,4 @@ public class TestBaseMobile {
         closeWebDriver();
         Attach.addVideos(sessionId);
     }
-
 }

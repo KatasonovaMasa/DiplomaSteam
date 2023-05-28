@@ -31,7 +31,6 @@ import static java.time.temporal.ChronoUnit.MILLIS;
 public class SteamMobileTest extends TestBaseMobile {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
-
     @Test
     @Order(1)
     @Story("Авторизация в приложении")
