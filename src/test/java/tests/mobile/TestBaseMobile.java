@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
-public class TestBase {
+public class TestBaseMobile {
     @BeforeAll
     public static void setup() {
             Configuration.browser = BrowserstackDriver.class.getName();
@@ -30,5 +30,4 @@ public class TestBase {
         closeWebDriver();
         Attach.addVideos(sessionId);
     }
-
 }

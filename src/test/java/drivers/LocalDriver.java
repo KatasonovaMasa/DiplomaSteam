@@ -35,7 +35,8 @@ public class LocalDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
 
-        options.setNoReset(true)
+        options
+//                .setNoReset(true)
                 .setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
                 .setDeviceName(config.deviceName())

@@ -6,7 +6,6 @@ import org.aeonbits.owner.Config;
         "classpath:authorization.properties"
 })
 public interface AuthorizationConfig extends Config {
-
     @Key("login")
     String login();
 

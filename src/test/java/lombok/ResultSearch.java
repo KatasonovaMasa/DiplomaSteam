@@ -1,4 +1,4 @@
-package drivers.models;
+package lombok;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

@@ -26,15 +26,14 @@ import static io.qameta.allure.Allure.step;
 import static java.time.temporal.ChronoUnit.MILLIS;
 
 @Tag("steamMobile")
-@Feature("Aвтотесты для Steam")
-@Story("Автотесты для Mobile")
+@Feature("Автотесты для Mobile")
 @Owner("Катасонова Мария")
-public class SteamMobileTest extends TestBase {
+public class SteamMobileTest extends TestBaseMobile {
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
-
 
     @Test
     @Order(1)
+    @Story("Авторизация в приложении")
     @DisplayName("Авторизация в приложении")
     void openApp() {
         step("Авторизация", () -> {
@@ -54,6 +53,7 @@ public class SteamMobileTest extends TestBase {
 
     @Test
     @Order(2)
+    @Story("Раздел игр")
     @DisplayName("Кнопка поиска игр")
     void searchGames() {
         step("Поиск игры", () -> {
@@ -88,6 +88,7 @@ public class SteamMobileTest extends TestBase {
 
     @Test
     @Order(3)
+    @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGames() {
         step("Добавление игры в корзину", () -> {
@@ -127,6 +128,7 @@ public class SteamMobileTest extends TestBase {
 
     @Test
     @Order(4)
+    @Story("Корзина")
     @DisplayName("Удалить игру из корзины")
     void deleteGameCart() {
         step("Удалить игру из корзины", () -> {

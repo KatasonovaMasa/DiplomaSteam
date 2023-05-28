@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.switchTo;
 
-
 public class SteamSteps {
     SteamElements steamelements = new SteamElements();
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
@@ -80,7 +79,7 @@ public class SteamSteps {
     public void successJobsSoftwareEngineering() {
         switchTo().window(1);
         steamelements.openSoftwareEngineering().click();
-        steamelements.successJobsSoftwareEngineering().shouldHave(hidden.because("Работы Software Engineering в Steam нет"));
+        steamelements.successJobsSoftwareEngineering().shouldHave(visible.because("Работы Software Engineering в Steam нет"));
         switchTo().window(0);
     }
 
