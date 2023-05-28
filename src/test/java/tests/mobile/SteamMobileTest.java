@@ -55,7 +55,7 @@ public class SteamMobileTest extends TestBaseMobile {
     @Order(2)
     @Story("Раздел игр")
     @DisplayName("Кнопка поиска игр")
-    void searchJobApi() {
+    void searchGames() {
         step("Поиск игры", () -> {
             $$(AppiumBy.className("android.widget.EditText")).get(0).click();
             sleep(1000);

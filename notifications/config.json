@@ -3,7 +3,7 @@
     "project": "Steam project",
     "environment": "Steam",
     "comment": "any comment here, @QA_marykat",
-    "reportLink": "https://jenkins.autotests.cloud/job/SteamProject/",
+    "reportLink": "https://jenkins.autotests.cloud/job/DiplomaSteam/",
     "language": "ru",
     "messenger": "telegram",
     "allureFolder": "allure-report/",
