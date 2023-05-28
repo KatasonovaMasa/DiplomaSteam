@@ -38,6 +38,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
+    @Story("Раздел игр")
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         steamSteps.openSteam();
@@ -86,7 +87,7 @@ public class SteamUiTest extends TestBase {
         steamSteps.logout();
     }
     @Test
-    @Story("Игтеграция с другими сервисами")
+    @Story("Интеграция с другими сервисами")
     @DisplayName("Открытие раздела SteamWorks")
     void openSteamWorks() {
         steamSteps.openSteam();
@@ -97,7 +98,7 @@ public class SteamUiTest extends TestBase {
     }
 
     @Test
-    @Story("Игтеграция с другими сервисами")
+    @Story("Интеграция с другими сервисами")
     @DisplayName("Работы в Steam")
     void jobsInSteam() {
         steamSteps.openSteam();
