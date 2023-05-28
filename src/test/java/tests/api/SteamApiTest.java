@@ -14,7 +14,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static help.CustomApiListener.withCustomTemplates;
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,7 +32,6 @@ public class SteamApiTest {
     void searchJobApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         ResultSearch data = given()
-                .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
                 .queryParam("start", "50")
@@ -56,7 +55,6 @@ public class SteamApiTest {
     void openSurvivalGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         given()
-                .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
                 .queryParam("cc", "RU")
@@ -80,7 +78,6 @@ public class SteamApiTest {
     void potentialBuyGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         ResultAddCart data = given()
-                .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
                 .queryParam("cc", "RU")
@@ -99,7 +96,6 @@ public class SteamApiTest {
     void AccessGamesApi() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         given()
-                .filter(withCustomTemplates())
                 .log().uri()
                 .contentType(ContentType.JSON)
                 .spec(Specification.request)
@@ -116,7 +112,6 @@ public class SteamApiTest {
     void checkingGameNews() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         SteamNews data = given()
-                .filter(withCustomTemplates())
                 .contentType(ContentType.JSON)
                 .queryParam("appid", 100)
                 .queryParam("count", 3)
