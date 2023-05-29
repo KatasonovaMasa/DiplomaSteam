@@ -2,7 +2,7 @@
 <img alt="GIPHY" src="/design/icons/STEAM.png">
 
 # <a name="TableOfContents">Содержание страницы</a>
-+ [:trophy: Инструменты и технологии](#ToolsAndTechnologies)
++ [:trophy: Инструменты и технологии](#MyToolsAndTechnologies)
 + [Описаниe](#Description)
 
 + [Проект](#Project)
