@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 public interface LocalConfig extends Config {
     @Key("deviceName")
     @DefaultValue("OnePlus 9")
-        String deviceName();
+    String deviceName();
 
     @Key("osVersion")
     @DefaultValue("11.0")
