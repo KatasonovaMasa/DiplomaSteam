@@ -32,7 +32,7 @@
     + [Пример запуска тестов через selenoid](#Video1)
     + [Пример запуска тестов через brawserstack](#Video2)
 
-# <a name="MyToolsAndTechnologies"> :trophy: Мои инструменты и технологии</a>
+<a name="MyToolsAndTechnologies">:trophy: Мои инструменты и технологии</a>
 <p  align="center">
   <a href="https://www.jetbrains.com/idea/"><code><img width="5%" title="IntelliJ IDEA" src="/design/icons/Intelij_IDEA.svg"></code></a>
   <a href="https://www.java.com/"><code><img width="5%" title="Java" src="/design/icons/Java.svg"></code></a>
