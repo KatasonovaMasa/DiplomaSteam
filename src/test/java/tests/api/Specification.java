@@ -15,8 +15,8 @@ public class Specification {
             .filter(withCustomTemplates())
             .contentType(ContentType.JSON);
     public static RequestSpecification requestNewsGames  = with()
-            .baseUri("http://api.steampowered.com/")
-            .basePath("ISteamNews/GetNewsForApp/v0002/?")
+            .baseUri("http://api.steampowered.com")
+            .basePath("/")
             .log().all()
             .filter(withCustomTemplates())
             .contentType(ContentType.JSON);
