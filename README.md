@@ -16,8 +16,8 @@
   - <a href="#console-api"> API
   - <a href="#console-mobile"> Mobile
 + [:chart_with_downwards_trend: Allure отчет](#Allure_report)
-  + [Главный экран отчета](#Allure_report1)
-  + [Страница с проведенными тестами](#Allure_report2)
++ [Главный экран отчета](#Allure_report1)
++ [Страница с проведенными тестами](#Allure_report2)
 + [:bar_chart: Интеграция с Allure TestOps](#Integration_Allure_TestOps)
     + [Экран с результатами запуска тестов](#Integration_Allure_TestOps1)
     + [Страница с тестами в TestOps](#Integration_Allure_TestOps2)
