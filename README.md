@@ -117,7 +117,7 @@
 ![This is an image](design/pictures/jenkins2.png)
 
 
-<a name="BuildParametersInJenkins"><h2>:clipboard: Параметры сборки в Jenkins:</h2></a>
+<a name="BuildParametersInJenkins"> <h2> :clipboard: Параметры сборки в Jenkins:</h2></a>
 
 Сборка в Jenkins
 
