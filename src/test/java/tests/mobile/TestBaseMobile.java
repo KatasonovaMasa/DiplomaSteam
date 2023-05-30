@@ -3,7 +3,6 @@ package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackDriver;
-import drivers.LocalDriver;
 import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
