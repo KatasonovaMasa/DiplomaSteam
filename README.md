@@ -163,17 +163,17 @@ ${TASK}
 -Dbaseurl=${BASEURL}
 -Dselenoid_url=${SELENOID_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/) Report</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/)</h2></a>
 
-- <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
+- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/#)</h3></a>
 
 ![This is an image](design/pictures/allure.png)
 
--  <a name="Allure_report2"><h3>Страница с проведенными тестами</h3></a>
+-  <a name="Allure_report2"><h3>Страница с проведенными тестами в [Allure Report](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/#suites/5c6961ccda11b989b711be0fa000af14/e117dc1bb946ebe9/)</h3></a>
 
 ![This is an image](design/pictures/allure1.png)
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с Allure [TestOps](https://allure.autotests.cloud/launch/24564)</h2></a>
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/24564)</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
