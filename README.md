@@ -110,11 +110,11 @@
 
 <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)<h2></a>
 
-- <a name="Allure_report1"><h3>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/178/)</h3></a>
+<a name="Allure_report1"><h3>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/178/)</h3></a>
 
 ![This is an image](design/pictures/jenkins1.png)
 
-- <a name="Allure_report1"><h3>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)</h3></a>
+<a name="Allure_report1"><h3>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)</h3></a>
 
 ![This is an image](design/pictures/jenkins2.png)
 
