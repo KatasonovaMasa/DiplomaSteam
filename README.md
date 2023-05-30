@@ -10,7 +10,7 @@
   - <a href="#cases-api"> API
   - <a href="#cases-mobile"> Mobile
 + [👷‍♂️ Сборка в Jenkins](#Build_in_Jenkins)
-    + [Страница сборки job в JenkinsJenkins](#Build_in_Jenkins1)
+    + [Страница сборки job в Jenkins](#Build_in_Jenkins1)
     + [Главный экран со списком job в Jenkins](#Build_in_Jenkins2)
 + [:clipboard: Параметры сборки в Jenkins](#Jenkins)
 + [:computer: Запуск из терминала](#Launch_from_terminal)
@@ -109,7 +109,7 @@
 
 
 <a name="Build_in_Jenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/)<h2></a>
-- <a name="Build_in_Jenkins1"><h5>Страница сборки job в Jenkins[Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/178/)</h5></a>
+- <a name="Build_in_Jenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/DiplomaSteam/178/)</h5></a>
 
 ![This is an image](design/pictures/jenkins1.png)
 
