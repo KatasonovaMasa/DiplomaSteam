@@ -194,7 +194,7 @@ ${TASK}
 
 ![This is an image](design/pictures/Brawserstack.png)
 
- <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с Jira</h2></a>
+ <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-675)</h2></a>
 
 - <a name="Page_Jira"><h3>Страница с задачей в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-675)<h3></a>
 
