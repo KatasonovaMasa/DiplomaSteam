@@ -1,6 +1,5 @@
 package help;
 
-
 import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 
