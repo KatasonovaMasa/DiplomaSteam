@@ -4,7 +4,6 @@
 # <a name="TableOfContents">Содержание страницы</a>
 + [:trophy: Инструменты и технологии](#MyToolsAndTechnologies)
 + [Описаниe](#Description)
-
 + [Проект](#Project)
 + [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)
   - <a href="#cases-ui"> UI
@@ -12,8 +11,6 @@
   - <a href="#cases-mobile"> Mobile
 + [👷‍♂️ Сборка в Jenkins](#Build_in_Jenkins)
 + [:clipboard: Параметры сборки в Jenkins](#Jenkins)
-
-[//]: # (+ [:clipboard: Параметры сборки в Jenkins:]&#40;#BuldJenkins&#41;)
 + [:computer: Запуск из терминала](#Launch_from_terminal)
   - <a href="#console-ui"> UI
   - <a href="#console-api"> API
@@ -118,8 +115,6 @@
 
 ![This is an image](design/pictures/jenkins2.png)
 
-
-[//]: # (<a name="BuldJenkins"><h2>:clipboard: Параметры сборки в Jenkins</h2></a>)
 <a name="Jenkins"><h2>:clipboard: Параметры сборки в Jenkins</h2></a>
 
 Сборка в Jenkins
