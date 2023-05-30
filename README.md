@@ -163,7 +163,7 @@ ${TASK}
 -Dbaseurl=${BASEURL}
 -Dselenoid_url=${SELENOID_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/) отчет</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure](https://jenkins.autotests.cloud/job/DiplomaSteam/178/allure/) Report</h2></a>
 
 - <a name="Allure_report1"><h3>Главный экран отчета</h3></a>
 
@@ -184,7 +184,7 @@ ${TASK}
 
 ![This is an image](design/pictures/allureTestsOp1.png)
 
-- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564)</h3></a>
+- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564/tree/369247?treeId=4235)</h3></a>
 
 ![This is an image](design/pictures/allureTestsOp2.png)
 
