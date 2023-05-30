@@ -15,8 +15,6 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 public class TestBaseMobile {
     @BeforeAll
     public static void setup() {
-
-//            Configuration.browser = LocalDriver.class.getName();
             Configuration.browser = BrowserstackDriver.class.getName();
             Configuration.browserSize = null;
         }
