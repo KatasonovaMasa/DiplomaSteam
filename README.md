@@ -212,7 +212,7 @@ https://github.com/KatasonovaMasa/Steam/assets/44576709/127ae60c-9c68-4e27-9f70-
 
 - <a name="Video2"><h3>Пример запуска тестов через brawserstack</h3></a>
 
-https://github.com/KatasonovaMasa/Steam/assets/44576709/60e3ac76-b146-41d5-b8e5-f1bcb075ae5e
+https://github.com/KatasonovaMasa/Steam/assets/44576709/35a05427-a8b1-4941-abc5-2cf98db8b66e
 
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
