@@ -7,6 +7,7 @@ import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.http.ContentType;
 import lombok.ResultSearch;
+import lombok.SteamAchievements;
 import lombok.SteamNews;
 import models.ResultAddCart;
 import org.junit.jupiter.api.Assertions;
@@ -106,7 +107,7 @@ public class SteamApiTest {
     }
 
     @Test
-    @Story("")
+    @Story("Игровые новости")
     @DisplayName("Проверка новостей по игре")
     void checkingGameNews() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -116,11 +117,32 @@ public class SteamApiTest {
                 .queryParam("count", 3)
                 .spec(Specification.requestNewsGames)
                 .when()
-                .get()
+                .get("ISteamNews/GetNewsForApp/v0002/")
                 .then()
                 .log().body()
                 .extract().as(SteamNews.class);
         Assertions.assertEquals(1499722448, data.getAppnews().getNewsitems().get(0).getDate());
         assertThat(1499722448).isEqualTo(data.getAppnews().getNewsitems().get(0).getDate());
+    }
+
+    @Test
+    @Story("Процент достижений")
+    @DisplayName("Процент достижений полученный из статистики пользователей")
+    void checkingAchievementPercentages() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        SteamAchievements data = given()
+                .contentType(ContentType.JSON)
+                .queryParam("gameid", 300)
+                .spec(Specification.requestNewsGames)
+                .when()
+                .get("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/")
+                .then()
+                .log().body()
+                .extract().as(SteamAchievements.class);
+        Assertions.assertEquals("DOD_WIN_KNIFE_FIGHT", data.getAchievementpercentages().getAchievements().get(2).getName());
+        assertThat("DOD_WIN_KNIFE_FIGHT").isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getName());
+
+        Assertions.assertEquals( 19.799999237060547, data.getAchievementpercentages().getAchievements().get(2).getPercent());
+        assertThat( 19.799999237060547).isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getPercent());
     }
 }
