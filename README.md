@@ -10,8 +10,8 @@
   - <a href="#cases-api"> API
   - <a href="#cases-mobile"> Mobile
 + [👷‍♂️ Сборка в Jenkins](#Build_in_Jenkins)
-+ [Страница сборки job в Jenkins](#Build_in_Jenkins2)
-+ [Главный экран со списком job в Jenkins](#Build_in_Jenkins3)
+    + [Страница сборки job в Jenkins](#Build_in_Jenkins2)
+    + [Главный экран со списком job в Jenkins](#Build_in_Jenkins3)
 + [:clipboard: Параметры сборки в Jenkins](#Jenkins)
 + [:computer: Запуск из терминала](#Launch_from_terminal)
   - <a href="#console-ui"> UI
