@@ -200,7 +200,7 @@ ${TASK}
 
 ![This is an image](design/pictures/jira_task.png)
 
-<a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
+<a name="Telegram"><h2>:iphone: Отчет в [Telegram](https://t.me/+wAG3zdRUXCxmNWNi)</h2></a>
 
 ![This is an image](design/pictures/telegram.png)
 
