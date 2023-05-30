@@ -5,7 +5,7 @@
 + [:trophy: Инструменты и технологии](#MyToolsAndTechnologies)
 + [Описаниe](#Description)
 + [Проект](#Project)
-+ [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)
++ [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)  
   - <a href="#cases-ui"> UI
   - <a href="#cases-api"> API
   - <a href="#cases-mobile"> Mobile
