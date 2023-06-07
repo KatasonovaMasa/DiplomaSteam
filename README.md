@@ -31,7 +31,7 @@
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
     + [Пример запуска тестов через selenoid](#Video1)
-    + [Пример запуска тестов через brawserstack](#Video2)
+    + [Пример запуска тестов через Browserstack](#Video2)
 
 <a name="MyToolsAndTechnologies"><h2>:trophy: Мои инструменты и технологии</h2></a>
 <p  align="center">
@@ -211,7 +211,7 @@ ${TASK}
 
 https://github.com/KatasonovaMasa/Steam/assets/44576709/127ae60c-9c68-4e27-9f70-06c7aef69da7
 
-- <a name="Video2"><h3>Пример запуска тестов через [Brawserstack](https://app-automate.browserstack.com/dashboard/v2/builds/a30dac4f7670d214d2a0cfda3716ec3a802ad3e2/sessions/e55b3ffbab9e70fd98626e7518989f663ab82f67)</h3></a>
+- <a name="Video2"><h3>Пример запуска тестов через [Browserstack](https://app-automate.browserstack.com/dashboard/v2/builds/a30dac4f7670d214d2a0cfda3716ec3a802ad3e2/sessions/e55b3ffbab9e70fd98626e7518989f663ab82f67)</h3></a>
 
 https://github.com/KatasonovaMasa/Steam/assets/44576709/35a05427-a8b1-4941-abc5-2cf98db8b66e
 
