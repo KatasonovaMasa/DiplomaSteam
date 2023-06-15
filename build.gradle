@@ -58,22 +58,17 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             'org.junit.jupiter:junit-jupiter:5.9.2',
             'io.qameta.allure:allure-junit5:2.18.1',
-            'com.github.javafaker:javafaker:1.0.2',
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "io.appium:java-client:$appiumVersion",
             'io.rest-assured:rest-assured:5.1.0',
             'org.assertj:assertj-core:3.23.1',
             'org.aeonbits.owner:owner:1.0.4',
-            'org.slf4j:slf4j-simple:2.0.6',
-            'com.codeborne:pdf-test:1.5.0',
-            'com.codeborne:xls-test:1.4.3',
-            'com.opencsv:opencsv:5.7.1'
+            'org.slf4j:slf4j-simple:2.0.6'
     )
 }
 
 dependencies {
     implementation ('io.qameta.allure:allure-rest-assured:2.21.0',
-            'com.github.javafaker:javafaker:1.0.2',
             'org.projectlombok:lombok:1.18.22',
             'com.codeborne:selenide:6.12.3',
             'org.testng:testng:7.1.0'
