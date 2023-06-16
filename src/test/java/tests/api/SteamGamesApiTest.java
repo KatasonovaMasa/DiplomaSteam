@@ -3,7 +3,6 @@ package tests.api;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import models.ResultAddCart;
 import models.ResultSearch;
 import models.SteamAchievements;
 import models.SteamNews;
@@ -17,12 +16,11 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("steamApi")
 @Feature("Автотесты для API")
 @Owner("Катасонова Мария")
-public class SteamApiTest {
+public class SteamGamesApiTest {
 
     @Test
     @Story("Раздел игр")
@@ -61,33 +59,6 @@ public class SteamApiTest {
                 .then()
                 .spec(Specification.responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/openCategories.json"));
-    }
-
-    @Test
-    @Story("Корзина")
-    @DisplayName("Добавление игры в корзину")
-    void potentialBuyGamesApi() {
-        ResultAddCart data = given()
-                .queryParam("cc", "RU")
-                .spec(Specification.request)
-                .when()
-                .get("dynamicstore/saledata/?/")
-                .then()
-                .spec(Specification.responseSpec)
-                .extract().as(ResultAddCart.class);
-        assertTrue(data.isbAllowAppImpressions());
-    }
-
-    @Test
-    @Story("Ограничение доступа")
-    @DisplayName("Проверка доступа")
-    void AccessGamesApi() {
-        given()
-                .spec(Specification.request)
-                .when()
-                .get("/api")
-                .then()
-                .body(matchesJsonSchemaInClasspath("schemes/access.json"));
     }
 
     @Test
