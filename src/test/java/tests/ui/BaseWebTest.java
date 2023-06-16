@@ -23,12 +23,14 @@ public class BaseWebTest {
     SteamCommunityPage newSteamCommunityPage = new SteamCommunityPage();
     SteamGamesPage newSteamGamesPage = new SteamGamesPage();
     SteamIntegrationPage newSteamIntegrationPage = new SteamIntegrationPage();
-    protected boolean isRemote = Boolean.getBoolean("isRemote");
 
     static WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+
+//        Configuration.baseUrl = "https://store.steampowered.com";
+//        Configuration.baseUrl = System.getProperty("baseurl", "https://store.steampowered.com/");
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.browser = webConfig.getBrowser();
