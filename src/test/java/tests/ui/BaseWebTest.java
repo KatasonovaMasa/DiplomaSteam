@@ -55,10 +55,8 @@ public class BaseWebTest {
     static void addAttachments () {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-        if (remote != null) {
-            Attach.browserConsoleLogs();
-            Attach.addVideo();
-        }
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
         Selenide.closeWebDriver();
     }
 }
