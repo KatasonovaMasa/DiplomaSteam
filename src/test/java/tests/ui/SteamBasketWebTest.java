@@ -6,12 +6,11 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import steps.SteamSteps;
 
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
-public class SteamBasketTest extends TestBase {
+public class SteamBasketWebTest extends BaseWebTest {
 
     @Test
     @Story("Корзина")

@@ -1,15 +1,12 @@
 package tests.api;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.http.ContentType;
+import models.ResultAddCart;
 import models.ResultSearch;
 import models.SteamAchievements;
 import models.SteamNews;
-import models.ResultAddCart;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

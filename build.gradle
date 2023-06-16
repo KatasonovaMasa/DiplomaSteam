@@ -63,7 +63,8 @@ dependencies {
             'io.rest-assured:rest-assured:5.1.0',
             'org.assertj:assertj-core:3.23.1',
             'org.aeonbits.owner:owner:1.0.4',
-            'org.slf4j:slf4j-simple:2.0.6'
+            'org.slf4j:slf4j-simple:2.0.6',
+            'org.aeonbits.owner:owner:1.0.12'
     )
 }
 

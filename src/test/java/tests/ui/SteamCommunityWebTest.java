@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @Tag("steamUI")
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
-public class SteamCommunityTest extends TestBase {
+public class SteamCommunityWebTest extends BaseWebTest {
 
     @Test
     @Story("Раздел игр")

@@ -1,9 +1,9 @@
 package models;
 
-import java.util.ArrayList;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+
+import java.util.ArrayList;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
