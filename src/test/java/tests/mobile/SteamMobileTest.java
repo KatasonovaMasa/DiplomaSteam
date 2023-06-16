@@ -42,6 +42,7 @@ public class SteamMobileTest extends TestBaseMobile {
             $$(AppiumBy.className("android.widget.EditText")).get(1).click();
             $$(AppiumBy.className("android.widget.EditText")).get(1).sendKeys(config.password());
             $$(AppiumBy.className("android.view.ViewGroup")).get(4).click();
+            sleep(15000);
             $$(AppiumBy.className("android.view.ViewGroup")).get(3).shouldHave(visible);
         });
     }
