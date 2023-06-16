@@ -18,24 +18,24 @@ public class SteamGamesTest extends TestBase {
     @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.openShop();
-        steamSteps.openCategories();
-        steamSteps.openSectionSurvivalGames();
-        steamSteps.successSurvivalGames();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                .openAuthorization();
+        newSteamGamesPage.openShop()
+                .openCategories()
+                .openSectionSurvivalGames()
+                .successSurvivalGames();
+        newSteamAuthorizationPage.logout();
     }
 
     @Test
     @Story("Раздел игр")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.setSearch();
-        steamSteps.clickSearch();
-        steamSteps.successSearchJob();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                                 .openAuthorization();
+        newSteamGamesPage.setSearch()
+                         .clickSearch()
+                         .successSearchJob();
+        newSteamAuthorizationPage.logout();
     }
 }

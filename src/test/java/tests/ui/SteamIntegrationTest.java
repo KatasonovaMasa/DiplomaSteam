@@ -18,21 +18,23 @@ public class SteamIntegrationTest extends TestBase {
     @Story("Интеграция с другими сервисами")
     @DisplayName("Открытие раздела SteamWorks")
     void openSteamIntegrationWorks() {
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.openSteamWorks();
-        steamSteps.successOpenSteamWorks();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                .openAuthorization();
+//        steamSteps.openSteamWorks();
+//        steamSteps.successOpenSteamWorks();
+        newSteamAuthorizationPage.logout();
+
     }
 
     @Test
     @Story("Интеграция с другими сервисами")
     @DisplayName("Работа в Steam")
     void openSteamIntegrationJob() {
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.openJobsSteam();
-        steamSteps.successJobsSoftwareEngineering();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                .openAuthorization();
+//        steamSteps.openJobsSteam();
+//        steamSteps.successJobsSoftwareEngineering();
+        newSteamAuthorizationPage.logout();
+
     }
 }

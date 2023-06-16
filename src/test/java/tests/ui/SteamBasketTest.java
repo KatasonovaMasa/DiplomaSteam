@@ -12,30 +12,30 @@ import steps.SteamSteps;
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 public class SteamBasketTest extends TestBase {
-    SteamSteps steamSteps = new SteamSteps();
 
     @Test
     @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void addBasketGames(){
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.openGames();
-        steamSteps.addGameToCart();
-        steamSteps.successBasketGame();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                                 .openAuthorization();
+        newSteamBasketPage.openGames()
+                          .addGameToCart()
+                          .successBasketGame();
+        newSteamAuthorizationPage.logout();
     }
 
     @Test
     @Story("Корзина")
     @DisplayName("Удалить игру из корзины")
     void deleteBasketGame(){
-        steamSteps.openSteam();
-        steamSteps.openAuthorization();
-        steamSteps.addGameCart();
-        steamSteps.deleteBasketGames();
-        steamSteps.successBasketEmpty();
-        steamSteps.logout();
+        newSteamAuthorizationPage.openSteam()
+                                 .openAuthorization();
+        newSteamBasketPage.openGames()
+                          .addGameToCart()
+                          .deleteBasketGames()
+                          .successBasketEmpty();
+        newSteamAuthorizationPage.logout();
     }
 
 

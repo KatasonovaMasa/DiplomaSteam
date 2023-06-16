@@ -9,10 +9,19 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.SteamAuthorizationPage;
+import pages.SteamBasketPage;
+import pages.SteamCommunityPage;
+import pages.SteamGamesPage;
 
 import java.util.Map;
 
 public class TestBase {
+    SteamAuthorizationPage newSteamAuthorizationPage = new SteamAuthorizationPage();
+    SteamBasketPage newSteamBasketPage = new SteamBasketPage();
+    SteamCommunityPage newSteamCommunityPage = new SteamCommunityPage();
+    SteamGamesPage newSteamGamesPage = new SteamGamesPage();
+
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
