@@ -4,15 +4,14 @@ import com.codeborne.selenide.Selenide;
 import config.AuthorizationConfig;
 import io.qameta.allure.Step;
 import org.aeonbits.owner.ConfigFactory;
-import pages.SteamElements;
+import pages.SteamBasketPage;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.sleep;
-import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SteamSteps {
-    SteamElements steamelements = new SteamElements();
+    SteamBasketPage steamelements = new SteamBasketPage();
     static AuthorizationConfig config = ConfigFactory.create(AuthorizationConfig.class, System.getProperties());
 
     @Step("Открытие сайта")
@@ -20,16 +19,19 @@ public class SteamSteps {
         Selenide.open("/?l=russian");
         steamelements.getLanguageSelection().click();
         steamelements.getEnglish().click();
+        sleep(1000);
     }
 
     @Step("Авторизация")
     public void openAuthorization(){
         steamelements.in().click();
-        steamelements.login().setValue(config.login());
-        steamelements.password().setValue(config.password());
+        steamelements.login().setValue("Test_quru");
+        steamelements.password().setValue("Mgbb4gas!)");
         steamelements.sigIn().click();
-        sleep(6000);
-    }
+        $x("//span[@id='account_pulldown']").click();
+        $x("//span[@id='account_language_pulldown']").click();
+        $x("//a[contains(text(),'English')]").click();
+  }
     @Step("Открыть 'Магазин'")
     public void openShop() {
         steamelements.getOpenShop().click();
@@ -117,11 +119,11 @@ public class SteamSteps {
         steamelements.getAddGameToCart().click();
     }
     @Step("Удалить игру из корзину")
-    public void deleteGameCart(){
+    public void deleteBasketGames(){
         steamelements.getDeleteGameCart().click();
     }
     @Step("Убедиться, что корзина пуста")
-    public void successCartEmpty(){
+    public void successBasketEmpty(){
         steamelements.getSuccessCartEmpty().shouldHave(visible.because("Корзина не пуста"));
     }
     @Step("Выход из учетки")

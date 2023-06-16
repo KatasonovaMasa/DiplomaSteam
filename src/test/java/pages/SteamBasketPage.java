@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class SteamElements {
+public class SteamBasketPage {
     private final SelenideElement openShop = $x("//a[contains(text(),'STORE')]");
     private final SelenideElement in = $x("//a[text()='login']");
     private final SelenideElement login = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='text']");
