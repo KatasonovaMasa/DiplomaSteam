@@ -1,8 +1,9 @@
-package lombok;
+package models;
 
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -23,7 +24,7 @@ public class SteamNews {
         private String gid;
         private String title;
         private String url;
-        private boolean is_external_url;
+        private boolean isExternalUrl;
         private String author;
         private String contents;
         private String feedLabel;
