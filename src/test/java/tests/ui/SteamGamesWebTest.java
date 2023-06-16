@@ -23,7 +23,6 @@ public class SteamGamesWebTest extends BaseWebTest {
                 .openCategories()
                 .openSectionSurvivalGames()
                 .successSurvivalGames();
-        newSteamAuthorizationPage.logout();
     }
 
     @Test
@@ -35,6 +34,5 @@ public class SteamGamesWebTest extends BaseWebTest {
         newSteamGamesPage.setSearch()
                          .clickSearch()
                          .successSearchJob();
-        newSteamAuthorizationPage.logout();
     }
 }
