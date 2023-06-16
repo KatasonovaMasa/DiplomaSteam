@@ -1,6 +1,5 @@
 package tests.mobile;
 
-
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackMobileDriver;
 import help.Attach;
