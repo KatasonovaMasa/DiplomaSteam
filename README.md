@@ -158,11 +158,13 @@ gradle clean steamMobile
 ```
 clean
 ${TASK}
+clean
+${TASK}
+-DbaseUrl=${BASE_URL}
+-DbrowserSize=${BROWSER_SIZE}
 -Dbrowser=${BROWSER}
--Dbrowser_version=${BROWSER_VERSION}
--Dbrowser_size=${BROWSER_SIZE}
--Dbaseurl=${BASEURL}
--Dselenoid_url=${SELENOID_URL}
+-DbrowserVersion="${BROWSER_VERSION}"
+-DremoteUrl=${REMOTE_URL}
 ```
 <a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/178/allure/)</h2></a>
 
