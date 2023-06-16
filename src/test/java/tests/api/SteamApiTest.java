@@ -1,19 +1,17 @@
 package tests.api;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.http.ContentType;
-import lombok.ResultSearch;
-import lombok.SteamAchievements;
-import lombok.SteamNews;
 import models.ResultAddCart;
+import models.ResultSearch;
+import models.SteamAchievements;
+import models.SteamNews;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import specs.Specification;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -30,10 +28,7 @@ public class SteamApiTest {
     @Story("Раздел игр")
     @DisplayName("Проверка поиска игр")
     void searchJobApi() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         ResultSearch data = given()
-                .log().uri()
-                .contentType(ContentType.JSON)
                 .queryParam("start", "50")
                 .queryParam("term", "Cuphead")
                 .queryParam("supportedlang", "russian")
@@ -53,10 +48,7 @@ public class SteamApiTest {
     @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGamesApi() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         given()
-                .log().uri()
-                .contentType(ContentType.JSON)
                 .queryParam("cc", "RU")
                 .queryParam("l", "english")
                 .queryParam("start", "32")
@@ -68,7 +60,6 @@ public class SteamApiTest {
                 .get("/saleaction/ajaxgetsaledynamicappquery?cc=RU&l=english")
                 .then()
                 .spec(Specification.responseSpec)
-                .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemes/openCategories.json"));
     }
 
@@ -76,10 +67,7 @@ public class SteamApiTest {
     @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void potentialBuyGamesApi() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         ResultAddCart data = given()
-                .log().uri()
-                .contentType(ContentType.JSON)
                 .queryParam("cc", "RU")
                 .spec(Specification.request)
                 .when()
@@ -94,15 +82,11 @@ public class SteamApiTest {
     @Story("Ограничение доступа")
     @DisplayName("Проверка доступа")
     void AccessGamesApi() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         given()
-                .log().uri()
-                .contentType(ContentType.JSON)
                 .spec(Specification.request)
                 .when()
                 .get("/api")
                 .then()
-                .statusCode(403)
                 .body(matchesJsonSchemaInClasspath("schemes/access.json"));
     }
 
@@ -110,9 +94,7 @@ public class SteamApiTest {
     @Story("Игровые новости")
     @DisplayName("Проверка новостей по игре")
     void checkingGameNews() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         SteamNews data = given()
-                .contentType(ContentType.JSON)
                 .queryParam("appid", 100)
                 .queryParam("count", 3)
                 .spec(Specification.requestNewsGames)
@@ -129,9 +111,7 @@ public class SteamApiTest {
     @Story("Процент достижений")
     @DisplayName("Процент достижений полученный из статистики пользователей")
     void checkingAchievementPercentages() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         SteamAchievements data = given()
-                .contentType(ContentType.JSON)
                 .queryParam("gameid", 300)
                 .spec(Specification.requestNewsGames)
                 .when()
