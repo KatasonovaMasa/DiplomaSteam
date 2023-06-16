@@ -20,6 +20,5 @@ public class SteamCommunityWebTest extends BaseWebTest {
                                  .openAuthorization();
         newSteamCommunityPage.openCommunity()
                              .successActiveCommunity();
-        newSteamAuthorizationPage.logout();
     }
 }
