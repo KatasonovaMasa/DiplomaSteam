@@ -107,5 +107,4 @@ public class SteamMobileTest extends TestBaseMobile {
     public void swipeUpQuick(int i) {
         swipeUp(2000);
     }
-
 }

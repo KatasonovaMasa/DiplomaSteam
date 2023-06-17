@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:authorization.properties"
+        "classpath:test.properties"
 })
 public interface AuthorizationConfig extends Config {
     @Key("login")
