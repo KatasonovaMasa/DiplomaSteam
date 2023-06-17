@@ -41,7 +41,7 @@ public class SteamGamesPage {
     }
     public SteamGamesPage setSearch() {
         step("Ввести в поиск 'Cuphead'", () -> {
-            setSearch.click();
+            setSearch.setValue("Cuphead");
         });
         return this;
     }
