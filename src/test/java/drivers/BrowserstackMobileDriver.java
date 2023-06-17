@@ -39,7 +39,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
         try {
             return new RemoteWebDriver(
-                    new URL(config.remoteUrl()), mutableCapabilities);
+                    new URL(config.remoteMobileUrl()), mutableCapabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

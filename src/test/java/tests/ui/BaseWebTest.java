@@ -15,7 +15,6 @@ import pages.*;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.Configuration.remote;
 
 public class BaseWebTest {
     SteamAuthorizationPage newSteamAuthorizationPage = new SteamAuthorizationPage();
@@ -29,8 +28,6 @@ public class BaseWebTest {
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-//        Configuration.baseUrl = "https://store.steampowered.com";
-//        Configuration.baseUrl = System.getProperty("baseurl", "https://store.steampowered.com/");
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.baseUrl = webConfig.getBaseUrl();
         Configuration.browser = webConfig.getBrowser();
