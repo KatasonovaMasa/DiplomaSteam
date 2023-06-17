@@ -11,13 +11,13 @@ import org.junit.jupiter.api.Test;
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 public class SteamIntegrationWebTest extends BaseWebTest {
-
+    private String login = "Test_quru", password = "Mgbb4gas!)";
     @Test
     @Story("Интеграция с другими сервисами")
     @DisplayName("Открытие раздела SteamWorks")
     void openSteamIntegrationWorks() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newIntegrationPage.openSteamWorks()
                 .successOpenSteamWorks();
         newAuthorizationPage.logout();
@@ -28,7 +28,7 @@ public class SteamIntegrationWebTest extends BaseWebTest {
     @DisplayName("Работа в Steam")
     void openSteamIntegrationJob() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newIntegrationPage.openJobsSteam()
                 .successJobsSoftwareEngineering();
         newAuthorizationPage.logout();

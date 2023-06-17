@@ -11,13 +11,12 @@ import org.junit.jupiter.api.Test;
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 public class SteamAuthorizationWebTest extends BaseWebTest {
+    private String login = "Test_quru", password = "Mgbb4gas!)";
 
     @Test
     @Story("Авторизация на сайте")
     @DisplayName("Авторизация на сайте")
     void authorization() {
-        newAuthorizationPage.openSteam()
-                .openAuthorization()
-                .logout();
+        newAuthorizationPage.openSteam().openAuthorization(login, password).logout();
     }
 }

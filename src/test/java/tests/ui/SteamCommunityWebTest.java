@@ -11,13 +11,13 @@ import org.junit.jupiter.api.Test;
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 public class SteamCommunityWebTest extends BaseWebTest {
-
+    private String login = "Test_quru", password = "Mgbb4gas!)";
     @Test
     @Story("Раздел игр")
     @DisplayName("Рекомендации в Активности сообщества")
     void checkCommunityActive() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newCommunityPage.openCommunity()
                 .successActiveCommunity();
     }

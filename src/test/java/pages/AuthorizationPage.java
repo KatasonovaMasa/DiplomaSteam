@@ -14,8 +14,7 @@ public class AuthorizationPage {
         return this;
     }
 
-    String login = "Test_quru",
-            password = "Mgbb4gas!)";
+
     private final SelenideElement
             in = $x("//a[@class='global_action_link']"),
             logins = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='text']"),
@@ -24,7 +23,7 @@ public class AuthorizationPage {
             account = $x("//*[@id='account_pulldown']"),
             logout = $x("//a[@href='javascript:Logout();']");
 
-    public AuthorizationPage openAuthorization() {
+    public AuthorizationPage openAuthorization(String login, String password) {
         step("Авторизуемся на сайте", () -> {
             in.click();
             logins.setValue(login);

@@ -11,13 +11,13 @@ import org.junit.jupiter.api.Test;
 @Owner("Катасонова Мария")
 @Feature("Автотесты для UI")
 public class SteamBasketWebTest extends BaseWebTest {
-
+    private String login = "Test_quru", password = "Mgbb4gas!)";
     @Test
     @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
     void addBasketGames() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newBasketPage.openGames()
                 .addGameToCart()
                 .successBasketGame();
@@ -29,7 +29,7 @@ public class SteamBasketWebTest extends BaseWebTest {
     @DisplayName("Удалить игру из корзины")
     void deleteBasketGame() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newBasketPage.openGames()
                 .addGameToCart()
                 .deleteBasketGames()

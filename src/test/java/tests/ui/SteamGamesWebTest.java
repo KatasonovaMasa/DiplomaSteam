@@ -12,13 +12,13 @@ import org.junit.jupiter.api.Test;
 @Feature("Автотесты для UI")
 public class SteamGamesWebTest extends BaseWebTest {
 
-
+    private String login = "Test_quru", password = "Mgbb4gas!)";
     @Test
     @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newGamesPage.openShop()
                 .openCategories()
                 .openSectionSurvivalGames()
@@ -30,7 +30,7 @@ public class SteamGamesWebTest extends BaseWebTest {
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
         newAuthorizationPage.openSteam()
-                .openAuthorization();
+                .openAuthorization(login, password);
         newGamesPage.setSearch()
                 .clickSearch()
                 .successSearchJob();
