@@ -17,13 +17,14 @@ import java.util.Map;
 
 
 public class BaseWebTest {
-    SteamAuthorizationPage newSteamAuthorizationPage = new SteamAuthorizationPage();
-    SteamBasketPage newSteamBasketPage = new SteamBasketPage();
-    SteamCommunityPage newSteamCommunityPage = new SteamCommunityPage();
-    SteamGamesPage newSteamGamesPage = new SteamGamesPage();
-    SteamIntegrationPage newSteamIntegrationPage = new SteamIntegrationPage();
+    AuthorizationPage newAuthorizationPage = new AuthorizationPage();
+    BasketPage newBasketPage = new BasketPage();
+    CommunityPage newCommunityPage = new CommunityPage();
+    GamesPage newGamesPage = new GamesPage();
+    IntegrationPage newIntegrationPage = new IntegrationPage();
 
     static WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -42,6 +43,7 @@ public class BaseWebTest {
 
         Configuration.browserCapabilities = capabilities;
     }
+
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -49,7 +51,7 @@ public class BaseWebTest {
     }
 
     @AfterAll
-    static void addAttachments () {
+    static void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();

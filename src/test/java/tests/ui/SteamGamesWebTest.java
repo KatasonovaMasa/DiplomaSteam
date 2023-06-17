@@ -17,9 +17,9 @@ public class SteamGamesWebTest extends BaseWebTest {
     @Story("Раздел игр")
     @DisplayName("Открытие раздела игр 'Выживание'")
     void openSurvivalGames() {
-        newSteamAuthorizationPage.openSteam()
+        newAuthorizationPage.openSteam()
                 .openAuthorization();
-        newSteamGamesPage.openShop()
+        newGamesPage.openShop()
                 .openCategories()
                 .openSectionSurvivalGames()
                 .successSurvivalGames();
@@ -29,10 +29,10 @@ public class SteamGamesWebTest extends BaseWebTest {
     @Story("Раздел игр")
     @DisplayName("Кнопка поиска игр")
     void searchJob() {
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamGamesPage.setSearch()
-                         .clickSearch()
-                         .successSearchJob();
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newGamesPage.setSearch()
+                .clickSearch()
+                .successSearchJob();
     }
 }

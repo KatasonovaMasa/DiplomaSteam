@@ -15,10 +15,10 @@ public class SteamCommunityWebTest extends BaseWebTest {
     @Test
     @Story("Раздел игр")
     @DisplayName("Рекомендации в Активности сообщества")
-    void checkCommunityActive(){
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamCommunityPage.openCommunity()
-                             .successActiveCommunity();
+    void checkCommunityActive() {
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newCommunityPage.openCommunity()
+                .successActiveCommunity();
     }
 }

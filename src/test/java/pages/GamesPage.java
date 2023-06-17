@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
-public class SteamGamesPage {
+public class GamesPage {
     private final SelenideElement
             openShop = $x("//a[contains(text(),'STORE')]"),
             openCategories = $x("//div[@id='genre_tab']//span[@class='pulldown']"),
@@ -15,43 +15,50 @@ public class SteamGamesPage {
             setSearch = $x("//*[@id='store_nav_search_term']"),
             buttonSearch = $x("//*[@id='store_search_link']/img"),
             searchJob = $x("//span[contains(text(),'Cuphead')]");
-    public SteamGamesPage openShop() {
+
+    public GamesPage openShop() {
         step("Открыть 'Магазин'", () -> {
             openShop.click();
         });
         return this;
     }
-    public SteamGamesPage openCategories() {
+
+    public GamesPage openCategories() {
         step("Открыть раздел Категории", () -> {
             openCategories.click();
         });
         return this;
     }
-    public SteamGamesPage openSectionSurvivalGames() {
+
+    public GamesPage openSectionSurvivalGames() {
         step("Открыть раздел игр 'Выживание'", () -> {
             openSectionSurvivalGames.click();
         });
         return this;
     }
-    public SteamGamesPage successSurvivalGames() {
+
+    public GamesPage successSurvivalGames() {
         step("Проверка открытия раздела игр 'Выживание'", () -> {
             successSurvivalGames.shouldHave(visible.because("Раздел игр 'Выживание' не открыт"));
         });
         return this;
     }
-    public SteamGamesPage setSearch() {
+
+    public GamesPage setSearch() {
         step("Ввести в поиск 'Cuphead'", () -> {
             setSearch.setValue("Cuphead");
         });
         return this;
     }
-    public SteamGamesPage clickSearch() {
+
+    public GamesPage clickSearch() {
         step("Нажать на кнопку 'Найти'", () -> {
             buttonSearch.click();
         });
         return this;
     }
-    public SteamGamesPage successSearchJob() {
+
+    public GamesPage successSearchJob() {
         step("Проверка кнопки поиска", () -> {
             searchJob.shouldHave(visible.because("Поиск не работает, игра не найдена"));
         });

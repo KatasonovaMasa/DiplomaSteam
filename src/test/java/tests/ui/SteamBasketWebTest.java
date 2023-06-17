@@ -15,27 +15,25 @@ public class SteamBasketWebTest extends BaseWebTest {
     @Test
     @Story("Корзина")
     @DisplayName("Добавление игры в корзину")
-    void addBasketGames(){
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamBasketPage.openGames()
-                          .addGameToCart()
-                          .successBasketGame();
-        newSteamAuthorizationPage.logout();
+    void addBasketGames() {
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newBasketPage.openGames()
+                .addGameToCart()
+                .successBasketGame();
+        newAuthorizationPage.logout();
     }
 
     @Test
     @Story("Корзина")
     @DisplayName("Удалить игру из корзины")
-    void deleteBasketGame(){
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamBasketPage.openGames()
-                          .addGameToCart()
-                          .deleteBasketGames()
-                          .successBasketEmpty();
-        newSteamAuthorizationPage.logout();
+    void deleteBasketGame() {
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newBasketPage.openGames()
+                .addGameToCart()
+                .deleteBasketGames()
+                .successBasketEmpty();
+        newAuthorizationPage.logout();
     }
-
-
 }

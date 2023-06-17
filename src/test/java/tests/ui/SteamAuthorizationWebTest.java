@@ -15,9 +15,9 @@ public class SteamAuthorizationWebTest extends BaseWebTest {
     @Test
     @Story("Авторизация на сайте")
     @DisplayName("Авторизация на сайте")
-    void authorization(){
-        newSteamAuthorizationPage.openSteam()
-                                .openAuthorization()
-                                .logout();
+    void authorization() {
+        newAuthorizationPage.openSteam()
+                .openAuthorization()
+                .logout();
     }
 }

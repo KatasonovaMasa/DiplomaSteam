@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SteamAchievements {
+public class Achievements {
     private Achievementpercentages Achievementpercentages;
 
     @Data

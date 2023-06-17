@@ -4,7 +4,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.ResultSearch;
-import models.SteamAchievements;
+import models.Achievements;
 import models.SteamNews;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -39,7 +39,7 @@ public class SteamGamesApiTest {
                 .log().body()
                 .extract().as(ResultSearch.class);
         assertEquals(1, data.getSuccess());
-        assertEquals( 17, data.getTotal_count());
+        assertEquals(17, data.getTotal_count());
     }
 
     @Test
@@ -82,18 +82,18 @@ public class SteamGamesApiTest {
     @Story("Процент достижений")
     @DisplayName("Процент достижений полученный из статистики пользователей")
     void checkingAchievementPercentages() {
-        SteamAchievements data = given()
+        Achievements data = given()
                 .queryParam("gameid", 300)
                 .spec(Specification.requestNewsGames)
                 .when()
                 .get("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/")
                 .then()
                 .log().body()
-                .extract().as(SteamAchievements.class);
+                .extract().as(Achievements.class);
         Assertions.assertEquals("DOD_WIN_KNIFE_FIGHT", data.getAchievementpercentages().getAchievements().get(2).getName());
         assertThat("DOD_WIN_KNIFE_FIGHT").isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getName());
 
-        Assertions.assertEquals( 19.799999237060547, data.getAchievementpercentages().getAchievements().get(2).getPercent());
-        assertThat( 19.799999237060547).isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getPercent());
+        Assertions.assertEquals(19.799999237060547, data.getAchievementpercentages().getAchievements().get(2).getPercent());
+        assertThat(19.799999237060547).isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getPercent());
     }
 }

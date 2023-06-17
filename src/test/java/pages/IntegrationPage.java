@@ -8,32 +8,36 @@ import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static io.qameta.allure.Allure.step;
 
-public class SteamIntegrationPage {
+public class IntegrationPage {
     private final SelenideElement
             opensSteamWorks = $x("//a[text()='Steamworks']"),
             successOpenSteamWorks = $x("//span[text()='Присоединиться к Steamworks']"),
             openJobs = $x("//a[text()='Jobs']"),
             successJobsSoftwareEngineering = $x("//h5[normalize-space()='Steam Software Engineer']"),
             openSoftwareEngineering = $x("//a[text()='Software Engineering']");
-    public SteamIntegrationPage openSteamWorks() {
+
+    public IntegrationPage openSteamWorks() {
         step("Открыть раздел SteamWorks", () -> {
             opensSteamWorks.scrollTo().click();
         });
         return this;
     }
-    public SteamIntegrationPage successOpenSteamWorks() {
+
+    public IntegrationPage successOpenSteamWorks() {
         step("Проверка открытия SteamWorks", () -> {
             successOpenSteamWorks.shouldHave(hidden.because("Раздел SteamWorks не открыт"));
         });
         return this;
     }
-    public SteamIntegrationPage openJobsSteam() {
+
+    public IntegrationPage openJobsSteam() {
         step("Открыть раздел Jobs", () -> {
             openJobs.scrollTo().click();
         });
         return this;
     }
-    public SteamIntegrationPage successJobsSoftwareEngineering() {
+
+    public IntegrationPage successJobsSoftwareEngineering() {
         step("Проверка открытия SteamWorks", () -> {
             switchTo().window(1);
             openSoftwareEngineering.click();

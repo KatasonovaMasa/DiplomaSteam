@@ -16,21 +16,21 @@ public class SteamIntegrationWebTest extends BaseWebTest {
     @Story("Интеграция с другими сервисами")
     @DisplayName("Открытие раздела SteamWorks")
     void openSteamIntegrationWorks() {
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamIntegrationPage.openSteamWorks()
-                               .successOpenSteamWorks();
-        newSteamAuthorizationPage.logout();
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newIntegrationPage.openSteamWorks()
+                .successOpenSteamWorks();
+        newAuthorizationPage.logout();
     }
 
     @Test
     @Story("Интеграция с другими сервисами")
     @DisplayName("Работа в Steam")
     void openSteamIntegrationJob() {
-        newSteamAuthorizationPage.openSteam()
-                                 .openAuthorization();
-        newSteamIntegrationPage.openJobsSteam()
-                                .successJobsSoftwareEngineering();
-        newSteamAuthorizationPage.logout();
+        newAuthorizationPage.openSteam()
+                .openAuthorization();
+        newIntegrationPage.openJobsSteam()
+                .successJobsSoftwareEngineering();
+        newAuthorizationPage.logout();
     }
 }
