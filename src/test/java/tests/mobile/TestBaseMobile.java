@@ -19,16 +19,18 @@ public class TestBaseMobile {
     static String deviceHost = System.getProperty("deviceHost");
     @BeforeAll
     public static void setup() {
-        addListener("AllureSelenide", new AllureSelenide());
+        if (deviceHost == null) {
+            deviceHost = "local";
+        }
+
         switch (deviceHost) {
-            case "browserstack":
-                Configuration.browser = BrowserstackMobileDriver.class.getName();
-                break;
+            case "real":
             case "local":
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
-            default:
-                throw new RuntimeException();
+            case "browserstack":
+                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                break;
         }
         Configuration.browserSize = null;
     }
@@ -54,9 +56,6 @@ public class TestBaseMobile {
     public void afterEach() {
         String sessionId = sessionId().toString();
         closeWebDriver();
-//        Attach.addVideos(sessionId);
-//        String sessionId = sessionId().toString();
-//        closeWebDriver();
         Attach.addVideos(sessionId);
         if (deviceHost.equals("browserstack")) {
             Attach.addVideos(sessionId);
