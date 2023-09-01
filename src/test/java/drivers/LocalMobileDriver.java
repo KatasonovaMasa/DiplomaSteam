@@ -21,7 +21,17 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 
 public class LocalMobileDriver implements WebDriverProvider {
+
+
     static LocalMobileConfig config = ConfigFactory.create(LocalMobileConfig.class, System.getProperties());
+
+//    public static URL getAppiumServerUrl() {
+//        try {
+//            return new URL(config.url());
+//        } catch (MalformedURLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     public static URL getAppiumServerUrl() {
         try {
@@ -38,6 +48,7 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
 
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
+              //  .setNoReset(true)
                 .setPlatformName(ANDROID)
                 .setDeviceName(config.deviceName())
                 .setPlatformVersion(config.osVersion())

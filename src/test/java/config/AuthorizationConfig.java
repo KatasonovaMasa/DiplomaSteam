@@ -11,4 +11,5 @@ public interface AuthorizationConfig extends Config {
 
     @Key("password")
     String password();
+
 }
