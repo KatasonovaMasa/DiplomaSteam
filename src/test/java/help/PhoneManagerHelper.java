@@ -1,30 +1,19 @@
 package help;
+
 import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.WaitOptions;
-import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.Capabilities;
+import io.appium.java_client.touch.WaitOptions;
+import io.qameta.allure.Step;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CommandExecutor;
-
-
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.time.Duration;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -88,7 +77,7 @@ public class PhoneManagerHelper {
         Dimension dimension = driver.manage().window().getSize();
         Point start = new Point((int) (dimension.width * 0.9), (int) (dimension.height * 0.9));
         Point end = new Point((int) (dimension.width * 0.2), (int) (dimension.height * 0.1));
-        W3cActions.doSwipe(driver, start, end, 100);  //with duration 1s
+        W3cActions.doSwipe(driver, start, end, 1000);  //with duration 1s
     }
 
     @Step("Свайп слева направо")

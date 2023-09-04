@@ -14,34 +14,37 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static io.qameta.allure.Allure.step;
 
 public class TestBaseMobile {
     static String deviceHost = System.getProperty("deviceHost");
     @BeforeAll
     public static void setup() {
-        if (deviceHost == null) {
-            deviceHost = "local";
-        }
-
+        addListener("AllureSelenide", new AllureSelenide());
         switch (deviceHost) {
-            case "real":
+            case "browserstack":
+                Configuration.browser = BrowserstackMobileDriver.class.getName();
+//                Configuration.pageLoadStrategy = "eager";
+                break;
             case "local":
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
-            case "browserstack":
-                Configuration.browser = BrowserstackMobileDriver.class.getName();
-                break;
+            default:
+                throw new RuntimeException();
         }
-        Configuration.browserSize = null;
-    }
-//    static LocalMobileConfig localMobileConfig = ConfigFactory.create(LocalMobileConfig.class, System.getProperties());
-  //  static BrowserstackConfig browserstackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+    Configuration.browserSize = null;
+    Configuration.timeout = 10000;
+}
+
+
+//        static LocalMobileConfig localMobileConfig = ConfigFactory.create(LocalMobileConfig.class, System.getProperties());
+//    static BrowserstackConfig browserstackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
 //    @BeforeAll
-//    public static void setup() {
-//        Configuration.browser = BrowserstackMobileDriver.class.getName();
+//    public static void setup2() {
+////        Configuration.browser = BrowserstackMobileDriver.class.getName();
 //        Configuration.pageLoadStrategy = "eager";
-////        Configuration.browser = LocalMobileDriver.class.getName();
+//        Configuration.browser = LocalMobileDriver.class.getName();
 //        Configuration.browserSize = null;
 //        Configuration.timeout = 10000;
 //    }
@@ -56,7 +59,6 @@ public class TestBaseMobile {
     public void afterEach() {
         String sessionId = sessionId().toString();
         closeWebDriver();
-        Attach.addVideos(sessionId);
         if (deviceHost.equals("browserstack")) {
             Attach.addVideos(sessionId);
         }
