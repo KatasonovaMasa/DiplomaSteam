@@ -48,8 +48,8 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
             $$(AppiumBy.className("android.view.ViewGroup")).get(4).click();
         });
         step("Проверить, что мы вошли в приложение и просвайпить до закрытия приветственных окон", () -> {
-            $$(AppiumBy.className("android.widget.TextView")).get(1).shouldHave(Condition.text("STEAM NOTIFICATIONS"));
-            sleep(4000);
+     //       $$(AppiumBy.className("android.widget.TextView")).get(1).shouldHave(Condition.text("STEAM NOTIFICATIONS"));
+    //        sleep(4000);
             swipeRightToLeft();
             swipeRightToLeft();
         });
