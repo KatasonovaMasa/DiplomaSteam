@@ -5,6 +5,7 @@ import com.codeborne.selenide.WebDriverRunner;
 import config.AuthorizationConfig;
 import io.appium.java_client.AppiumBy;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
@@ -16,6 +17,10 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Dimension;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 
 import java.time.Duration;
@@ -83,13 +88,14 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
 //    }
 
     public static void swipeRightToLeft() {
-        Dimension size = WebDriverRunner.getWebDriver().manage().window().getSize();
+        AppiumDriver driver = (AppiumDriver) WebDriverRunner.getWebDriver();
+        Dimension size = driver.manage().window().getSize();
         int startX = (int) (size.width * 0.8);
         int endX = (int) (size.width * 0.2);
         int startY = size.height / 2;
-        new TouchAction((PerformsTouchActions) getWebDriver())
+        new TouchAction((PerformsTouchActions) driver)
                 .press(PointOption.point(startX, startY))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(10000)))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
                 .moveTo(PointOption.point(endX, startY))
                 .release()
                 .perform();
