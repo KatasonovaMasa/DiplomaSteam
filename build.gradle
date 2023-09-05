@@ -41,7 +41,7 @@ def
     selenideVersion = "6.13.0",
     jacksonVersion = "2.14.2",
     allureVersion = "2.21.0",
-    appiumVersion = "8.4.0",
+    appiumVersion = "8.5.0",
     slf4jVersion = "2.0.7",
     junitVersion = "5.8.2",
     restAssured = "4.5.1"
