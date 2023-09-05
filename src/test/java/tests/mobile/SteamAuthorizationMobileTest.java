@@ -3,7 +3,7 @@ package tests.mobile;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
 import config.AuthorizationConfig;
-import io.appium.java_client.AppiumBy;
+
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
@@ -18,6 +18,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
@@ -43,38 +45,26 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
     @Story("Авторизация в приложении")
     @DisplayName("Авторизация в приложении")
     void openApp() {
-        step("Заполняем логин/пароль", () -> {
-            $$(AppiumBy.className("android.widget.EditText")).get(0).click();
-            $$(AppiumBy.className("android.widget.EditText")).get(0).sendKeys(config.login());
-            $$(AppiumBy.className("android.widget.EditText")).get(1).click();
-            $$(AppiumBy.className("android.widget.EditText")).get(1).sendKeys(config.password());
-        });
-        step("Нажать кнопку 'Sign in'", () -> {
-            $$(AppiumBy.className("android.view.ViewGroup")).get(4).click();
-        });
-        step("Проверить, что мы вошли в приложение и просвайпить до закрытия приветственных окон", () -> {
-     //       $$(AppiumBy.className("android.widget.TextView")).get(1).shouldHave(Condition.text("STEAM NOTIFICATIONS"));
-    //        sleep(4000);
-            swipeRightToLeft();
-            swipeRightToLeft();
-        });
-        step("Закрыть приветственные окна", () -> {
-            $$(AppiumBy.className("android.widget.TextView")).get(14).shouldHave(Condition.text("Done")).click();
-            $$(AppiumBy.className("android.widget.TextView")).get(4).shouldHave(Condition.text("Add authenticator")).click();
-        });
-        step("Перейти в профиль", () -> {
-            $$(AppiumBy.className("android.widget.ImageView")).get(0).shouldBe(Condition.visible).click();
-            $$(AppiumBy.className("android.widget.TextView")).get(0).shouldHave(Condition.text("katasonomasa").because("Не вошли в профиль"));
-        });
-        step("Разлогиниться из приложения", () -> {
-            $$(AppiumBy.className("android.widget.TextView")).get(20).shouldHave(Condition.text("Sign Out")).click();
-            $$(AppiumBy.className("android.widget.Button")).get(0).click();
-            $(AppiumBy.xpath("//android.widget.TextView[contains(@text, 'Forgot your account name or password?')]")).shouldHave(Condition.visible.because("Не вышли из приложения"));
-        });
+        $$(MobileBy.className("android.widget.EditText")).get(0).click();
+        $$(MobileBy.className("android.widget.EditText")).get(0).sendKeys(config.login());
+        $$(MobileBy.className("android.widget.EditText")).get(1).click();
+        $$(MobileBy.className("android.widget.EditText")).get(1).sendKeys(config.password());
 
+        $$(MobileBy.className("android.view.ViewGroup")).get(4).click();
 
+// ...
+
+        $$(MobileBy.className("android.widget.TextView")).get(14).shouldHave(Condition.text("Done")).click();
+        $$(MobileBy.className("android.widget.TextView")).get(4).shouldHave(Condition.text("Add authenticator")).click();
+
+        $$(MobileBy.className("android.widget.ImageView")).get(0).shouldBe(Condition.visible).click();
+        $$(MobileBy.className("android.widget.TextView")).get(0).shouldHave(Condition.text("katasonomasa").because("Не вошли в профиль"));
+
+        $$(MobileBy.className("android.widget.TextView")).get(20).shouldHave(Condition.text("Sign Out")).click();
+        $$(MobileBy.className("android.widget.Button")).get(0).click();
+        $(MobileBy.xpath("//android.widget.TextView[contains(@text, 'Forgot your account name or password?')]")).shouldHave(Condition.visible.because("Не вышли из приложения"));
     }
-//    public <MobileDriver> void swipeRightToLeft(int duration) {
+        //    public <MobileDriver> void swipeRightToLeft(int duration) {
 //        Dimension size = getWebDriver().manage().window().getSize();
 //        int startX = (int) (size.width * 0.8);
 //        int endX = (int) (size.width * 0.2);
