@@ -1,13 +1,14 @@
 package tests.mobile;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.WebDriverRunner;
 import config.AuthorizationConfig;
-import drivers.BrowserstackMobileDriver;
-import help.PhoneManagerHelper;
 import io.appium.java_client.AppiumBy;
+
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -16,16 +17,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
 
 import java.time.Duration;
-import java.util.Arrays;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
 import static io.qameta.allure.Allure.step;
 import static java.lang.Thread.sleep;
@@ -52,8 +50,8 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
         step("Проверить, что мы вошли в приложение и просвайпить до закрытия приветственных окон", () -> {
             $$(AppiumBy.className("android.widget.TextView")).get(1).shouldHave(Condition.text("STEAM NOTIFICATIONS"));
             sleep(4000);
-            swipeRightToLeft(100);
-            swipeRightToLeft(500);
+            swipeRightToLeft();
+            swipeRightToLeft();
         });
         step("Закрыть приветственные окна", () -> {
             $$(AppiumBy.className("android.widget.TextView")).get(14).shouldHave(Condition.text("Done")).click();
@@ -71,22 +69,30 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
 
 
     }
-    public static void swipeRightToLeft(int timeOfSwipeMs) {
-        TouchAction action = new TouchAction((PerformsTouchActions) getWebDriver());
-        Dimension size = getWebDriver().manage().window().getSize();
-        int start_x = (int) (size.width * 0.8);
-        int y = size.height / 2;
-        int end_x = (int) (size.width * 0.2);
+//    public <MobileDriver> void swipeRightToLeft(int duration) {
+//        Dimension size = getWebDriver().manage().window().getSize();
+//        int startX = (int) (size.width * 0.8);
+//        int endX = (int) (size.width * 0.2);
+//        int startY = size.height / 2;
+//        TouchAction action = new TouchAction((PerformsTouchActions) getWebDriver());
+//        action.press(PointOption.point(startX, startY))
+//                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(duration)))
+//                .moveTo(PointOption.point(endX, startY))
+//                .release()
+//                .perform();
+//    }
 
-        action
-                .press(point(start_x, y))
-                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(timeOfSwipeMs)))
-                .moveTo(point(end_x, y))
+    public static void swipeRightToLeft() {
+        Dimension size = WebDriverRunner.getWebDriver().manage().window().getSize();
+        int startX = (int) (size.width * 0.8);
+        int endX = (int) (size.width * 0.2);
+        int startY = size.height / 2;
+        new TouchAction((PerformsTouchActions) getWebDriver())
+                .press(PointOption.point(startX, startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(10000)))
+                .moveTo(PointOption.point(endX, startY))
                 .release()
                 .perform();
     }
 
-    public static void swipeRightToLeftQuick(int timeOfSwipeMs) {
-        swipeRightToLeft(2000);
-    }
 }

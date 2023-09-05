@@ -22,6 +22,8 @@ allure{
     }
 }
 
+
+
 repositories {
     mavenCentral()
     compileJava {
@@ -34,7 +36,7 @@ compileTestJava{
 }
 
 def
-    webdrivermanagerVersion = "5.2.1",
+//    webdrivermanagerVersion = "5.2.1",
     restAssuredVersion = "5.3.0",
     selenideVersion = "6.13.0",
     jacksonVersion = "2.14.2",
@@ -46,7 +48,7 @@ def
 
 dependencies {
     testImplementation (
-            "io.github.bonigarcia:webdrivermanager:$webdrivermanagerVersion",
+//            "io.github.bonigarcia:webdrivermanager:$webdrivermanagerVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
@@ -65,12 +67,16 @@ dependencies {
             "org.aeonbits.owner:owner:1.0.4",
             "org.slf4j:slf4j-simple:2.0.6",
             "commons-io:commons-io:2.11.0"
+//            ,
+//            "io.appium:java-client:7.5.1"
     )
     implementation (
             "io.qameta.allure:allure-rest-assured:2.21.0",
             "org.projectlombok:lombok:1.18.22",
             "com.codeborne:selenide:6.12.3",
             "org.testng:testng:7.1.0"
+//            ,
+//            "io.appium:java-client:7.5.1"
     )
 }
 
