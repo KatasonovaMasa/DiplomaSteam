@@ -26,6 +26,7 @@ import java.util.Arrays;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static help.PhoneManagerHelper.swipeFromRightToLeft;
 import static io.appium.java_client.touch.offset.PointOption.point;
 import static io.qameta.allure.Allure.step;
 import static java.lang.Thread.sleep;
@@ -52,8 +53,8 @@ public class SteamAuthorizationMobileTest extends BrowserstackTestBaseMobile {
         step("Проверить, что мы вошли в приложение и просвайпить до закрытия приветственных окон", () -> {
             $$(AppiumBy.className("android.widget.TextView")).get(1).shouldHave(Condition.text("STEAM NOTIFICATIONS"));
             sleep(4000);
-            swipeRightToLeft(100);
-            swipeRightToLeft(500);
+            swipeFromRightToLeft();
+            swipeFromRightToLeft();
         });
         step("Закрыть приветственные окна", () -> {
             $$(AppiumBy.className("android.widget.TextView")).get(14).shouldHave(Condition.text("Done")).click();
