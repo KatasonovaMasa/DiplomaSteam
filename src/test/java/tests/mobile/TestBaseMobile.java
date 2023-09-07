@@ -36,7 +36,6 @@ public class TestBaseMobile {
     Configuration.timeout = 10000;
 }
 
-
 //        static LocalMobileConfig localMobileConfig = ConfigFactory.create(LocalMobileConfig.class, System.getProperties());
 //    static BrowserstackConfig browserstackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
