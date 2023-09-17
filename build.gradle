@@ -64,13 +64,15 @@ dependencies {
             "org.assertj:assertj-core:3.23.1",
             "org.aeonbits.owner:owner:1.0.4",
             "org.slf4j:slf4j-simple:2.0.6",
-            "commons-io:commons-io:2.11.0"
+            "commons-io:commons-io:2.11.0",
+            "io.appium:java-client:7.4.1"
     )
     implementation (
             "io.qameta.allure:allure-rest-assured:2.21.0",
             "org.projectlombok:lombok:1.18.22",
             "com.codeborne:selenide:6.12.3",
-            "org.testng:testng:7.1.0"
+            "org.testng:testng:7.1.0",
+            "io.appium:java-client:7.4.1"
     )
 }
 
