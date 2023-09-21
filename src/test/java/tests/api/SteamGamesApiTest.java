@@ -93,7 +93,8 @@ public class SteamGamesApiTest {
         Assertions.assertEquals("DOD_WIN_KNIFE_FIGHT", data.getAchievementpercentages().getAchievements().get(2).getName());
         assertThat("DOD_WIN_KNIFE_FIGHT").isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getName());
 
-        Assertions.assertEquals(19.799999237060547, data.getAchievementpercentages().getAchievements().get(2).getPercent());
+        Assertions.assertEquals(19.700000762939453, data.getAchievementpercentages().getAchievements().get(2).getPercent());
         assertThat(19.700000762939453).isEqualTo(data.getAchievementpercentages().getAchievements().get(2).getPercent());
     }
 }
+

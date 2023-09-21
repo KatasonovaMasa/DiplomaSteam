@@ -34,7 +34,6 @@ compileTestJava{
 }
 
 def
-        webdrivermanagerVersion = "5.2.1",
         restAssuredVersion = "5.3.0",
         selenideVersion = "6.13.0",
         jacksonVersion = "2.14.2",
@@ -46,15 +45,13 @@ def
 
 dependencies {
     testImplementation (
-            "io.github.bonigarcia:webdrivermanager:$webdrivermanagerVersion",
+            "io.github.bonigarcia:webdrivermanager:5.0.3",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "io.rest-assured:rest-assured:$restAssured",
             "com.codeborne:selenide:$selenideVersion",
