@@ -8,11 +8,11 @@ import org.aeonbits.owner.Config;
 
 public interface BrowserstackConfig extends Config {
     @Key("username")
-    @DefaultValue("lulushina_YnwUoV")
+    @DefaultValue("katasonova_kmaPs9")
     String username();
 
     @Key("passwordKey")
-    @DefaultValue("S3vcbwdzdijxoDRdMDsQ")
+    @DefaultValue("8TExsumVYK6Ge57hF2yT")
     String passwordKey();
 
     @Key("remoteMobileUrl")
@@ -20,7 +20,7 @@ public interface BrowserstackConfig extends Config {
     String remoteMobileUrl();
 
     @Key("app")
-    @DefaultValue("bs://a2fa7f1d67e412b06dd644afb42c35e9e27edb3e")
+    @DefaultValue("bs://a50c24c8bed421284e6a1e201846f5776a569843")
     String app();
 
 }
