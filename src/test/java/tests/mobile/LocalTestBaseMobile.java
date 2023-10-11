@@ -1,10 +1,7 @@
 package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
-import config.LocalMobileConfig;
-import drivers.BrowserstackMobileDriver;
-import drivers.LocalMobileDriver;
-import help.Attach;
+import drivers.LocalDriver;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -20,7 +17,7 @@ public class LocalTestBaseMobile {
 
     @BeforeAll
     public static void setup() {
-    Configuration.browser = LocalMobileDriver.class.getName();
+    Configuration.browser = LocalDriver.class.getName();
     Configuration.browserSize = null;
     Configuration.timeout = 10000;
 }

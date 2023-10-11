@@ -2,8 +2,6 @@ package tests.mobile;
 
 import com.codeborne.selenide.Condition;
 import config.AuthorizationConfig;
-import drivers.BrowserstackMobileDriver;
-import help.PhoneManagerHelper;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
@@ -16,12 +14,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
 
 import java.time.Duration;
-import java.util.Arrays;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;

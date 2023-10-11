@@ -2,7 +2,7 @@ package tests.mobile;
 
 import com.codeborne.selenide.Configuration;
 import config.BrowserstackConfig;
-import drivers.BrowserstackMobileDriver;
+import drivers.BrowserstackDriver;
 import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -19,7 +19,7 @@ public class BrowserstackTestBaseMobile {
 
     @BeforeAll
     public static void setup() {
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = null;
         Configuration.timeout = 10000;

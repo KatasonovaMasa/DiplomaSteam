@@ -14,7 +14,6 @@ public class AuthorizationPage {
         return this;
     }
 
-
     private final SelenideElement
             in = $x("//a[@class='global_action_link']"),
             logins = $x("//*[contains(@class,'newlogindialog_TextField')]//input[@type='text']"),

@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.LocalMobileConfig;
+import config.BrowserstackConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.aeonbits.owner.ConfigFactory;
@@ -19,19 +19,9 @@ import static io.appium.java_client.remote.AutomationName.ANDROID_UIAUTOMATOR2;
 import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
+public class LocalDriver implements WebDriverProvider {
 
-public class LocalMobileDriver implements WebDriverProvider {
-
-
-    static LocalMobileConfig config = ConfigFactory.create(LocalMobileConfig.class, System.getProperties());
-
-//    public static URL getAppiumServerUrl() {
-//        try {
-//            return new URL(config.url());
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
     public static URL getAppiumServerUrl() {
         try {
@@ -48,13 +38,13 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
 
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
-              //  .setNoReset(true)
+                .setNoReset(false)  // для того чтоб приложение не перезапускалось как новое (true)
                 .setPlatformName(ANDROID)
                 .setDeviceName(config.deviceName())
                 .setPlatformVersion(config.osVersion())
                 .setApp(getAppPath())
-                .setAppPackage("com.valvesoftware.android.steam.community")
-                .setAppActivity("com.valvesoftware.android.steam.community.MainActivity");
+                .setAppPackage(config.appPackage())
+                .setAppActivity(config.appActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
